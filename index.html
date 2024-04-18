@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="./Estilos/style.css">
+</head>
+<body>
+    <header>
+        <h1>Nombre del sitio</h1> 
+    </header>
+    <main>
+        <div id="registro">
+                <h3>Registrar usuario</h3>
+                <form action="./home.html" method="get">
+                    <label for="name">
+                        <input type="text" name="name" id="name" placeholder="Nombre" required>
+                    </label>
+                    <label for="lastname">
+                        <input type="text" name="lastname" id="lastname" placeholder="Apellido" required>
+                    </label>
+                    <label for="username">
+                        <input type="text" name="username" id="username" placeholder="Nombre de Usuario" required>
+                    </label>
+                    <label for="pass">
+                        <input type="password" name="password" id="pass" placeholder="Contraseña" required>
+                    </label>
+                    <label for="repass">
+                        <input type="password" name="repass" id="repass" placeholder="Repetir contraseña" required>
+                    </label>
+                    <label for="mail">
+                        <input type="email" name="email" id="mail" placeholder="example@mail.com" required>    
+                    </label>
+                    Ya tienes una cuenta? <a href="./login.html" id="log">  Inicia sesión</a>
+                        <section id="paymethod">
+                            <h4>Metodo de pago</h4>
+                            <label for="creddit_card">
+                                <input type="checkbox" id="cbox1">Tarjeta de Crédito
+                               <input type="number" id="card_number" name="card_number" placeholder="Número de tarjeta" required>
+                              <input type="number" id="sec_code" name="sec_code" placeholder="Código de seguridad" required >
+                            </label>
+                            <label>
+                                <input type="checkbox" id="cbox2">Pago Facil
+                                <input type="checkbox" id="cbox3">RapiPago
+                            </label>
+                            <label>
+                                <input type="checkbox" id="cbox3">Transferencia bancaria
+                                <p>CBU: 0101010101010101</p>
+                            </label>
+                        </section>
+                    <button type="submit">Registrar</button>
+                    <button type="reset">Cancelar</button>
+                </form>       
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>

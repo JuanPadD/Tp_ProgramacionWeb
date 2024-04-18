@@ -1,0 +1,33 @@
+#registro {
+background-color:hwb(135 4% 9%);
+display: block;
+justify-content: center;
+align-items: center;
+}
+
+
+#paymethod{
+    background-color:coral;
+}
+
+#cbox1{
+    margin-top: 0;
+}
+
+
+h1{
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+form, label, section{
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
