@@ -11,7 +11,8 @@
         <h1>Nombre del sitio</h1> 
     </header>
     <main>
-        <div id="registro">
+        <div>
+            <div class="registro">
                 <h3>Registrar usuario</h3>
                 <form action="./home.html" method="get">
                     <label for="name">
@@ -32,26 +33,27 @@
                     <label for="mail">
                         <input type="email" name="email" id="mail" placeholder="example@mail.com" required>    
                     </label>
-                    Ya tienes una cuenta? <a href="./login.html" id="log">  Inicia sesión</a>
-                        <section id="paymethod">
-                            <h4>Metodo de pago</h4>
+                      <span>Ya tienes una cuenta?</span><a href="./login.html" id="log">  Inicia sesión</a>
+                        <section class="paymethod">
+                            <span class="metodopago">Metodo de pago</span>
                             <label for="creddit_card">
-                                <input type="checkbox" id="cbox1">Tarjeta de Crédito
+                                <input type="radio" id="cbox1" name="mediodepago" value="1">Tarjeta de Crédito
                                <input type="number" id="card_number" name="card_number" placeholder="Número de tarjeta" required>
                               <input type="number" id="sec_code" name="sec_code" placeholder="Código de seguridad" required >
                             </label>
                             <label>
-                                <input type="checkbox" id="cbox2">Pago Facil
-                                <input type="checkbox" id="cbox3">RapiPago
+                                <input type="radio" id="cbox2" name="mediodepago" value="2">Pago Facil
+                                <input type="radio" id="cbox3" name="mediodepago" value="3">RapiPago
                             </label>
                             <label>
-                                <input type="checkbox" id="cbox3">Transferencia bancaria
+                                <input type="radio" id="cbox3"name="mediodepago" value="4">Transferencia bancaria
                                 <p>CBU: 0101010101010101</p>
                             </label>
                         </section>
                     <button type="submit">Registrar</button>
                     <button type="reset">Cancelar</button>
                 </form>       
+            </div>
         </div>
     </main>
     <footer></footer>
