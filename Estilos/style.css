@@ -67,3 +67,32 @@ input{
     border-color: transparent;
     width: fit-content;
 }
+
+/*CSS NUEVO*/
+
+*{
+    margin: 0;
+}
+
+.banner-img{
+    width: 100%;
+}
+
+.login-panel {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.login-panel p{
+    margin: 10px 0;
+}
+
+.login-btn{
+    margin:10px auto;
+}
+
+.login-panel a{
+    text-decoration: none;
+    color: rgb(33, 33, 218);
+}
