@@ -1,23 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
     <title>Home</title>
 </head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>Perfil</li>
-                <li>Peliculas</li>
-                <li>Favoritos</li>
+
+<body style="color: white;">
+    <header class="home_header">
+        <nav class="navbar">
+            <ul class="menu">
+                <li class="menu_item"><a href="#home">Home</a></li>
+                <li class="menu_item"><a href="#series">Series</a></li>
+                <li class="menu_item"><a href="#peliculas">Peliculas</a></li>
+                <li class="menu_item"><a href="#perfil">Perfil</a></li>
             </ul>
         </nav>
+        <form action="" class="search_form">
+            <div class="select_container">
+                <label for="select_category">Categorías</label>
+                <select name="select_category" id="select_category">
+                    <option value=“comedy”>Comedia</option>
+                    <option value="romance">Romance</option>
+                    <option value="horror">Terror</option>
+                    <option value="action">Acción</option>
+                    <option value="fantasy">Fantasía</option>
+                </select>
+            </div>
+            <div class="search_container">
+                <input type="search" value="Buscar por nombre">
+            </div>
+        </form>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+        <section>
+            <div class="img_container">
+                <div class="img_item"><img src="./img/seriecomedia1.jpg" alt=""></div>
+                <div class="img_item"><img src="./img/peliculacomedia1.jpg" alt=""></div>
+                <div class="img_item"><img src="./img/peliculacomedia2.jpg" alt=""></div>
+                <div class="img_item"><img src="./img/pelicularomance1.jpg" alt=""></div>
+                <div class="img_item"><img src="./img/serieromance1.jpg" alt=""></div>
+                <div class="img_item"><img src="./img/serieromance2.jpg" alt=""></div>
+                <div class="img_item"><img src="./img/peliculaterror1.jpg" alt=""></div>
+                <div class="img_item"><img src="./img/peliculaterror2.jpg" alt=""></div>
+                <div class="img_item"><img src="./img/serieterror1.jpg" alt=""></div>
+                <div class="img_item"><img src="./img/serieaccion1.jpg" alt=""></div>
+                <div class="img_item"><img src="./img/serieaccion2.jpg" alt=""></div>
+                <div class="img_item"><img src="./img/peliculaaccion1.jpg" alt=""></div>
+                <div class="img_item"><img src="./img/peliculafantasia1.jpg" alt=""></div>
+                <div class="img_item"><img src="./img/peliculafantasia2.jpg" alt=""></div>
+                <div class="img_item"><img src="./img/seriefantasia1.jpg" alt=""></div>
+                <div class="img_item"><img src="./img/peliculafantasia3.jpg" alt=""></div>
+            </div>
+        </section>
+    </main>
+
 </body>
+
 </html>
