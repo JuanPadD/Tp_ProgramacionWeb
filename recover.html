@@ -3,28 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Recuperar Cuenta</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <main class="login">
         <section class="login_menu">
             
-            <img src="./img/series-banner.png" alt="">
+            <img src="./img/series-banner.png" alt="banner">
 
             <div class="login_data">
                 <h1>¿Olvidaste la contraseña?</h1>
                 <p class="login_input">Para recuperar tu contraseña, ingresa el mail asociado a tu cuenta.</p>
                 <p class="login_input">Ingresa tu mail </p>
-                <input class="input" type="text">
-                <a href="#" class="login_btn">enviar</a> 
+
+                <form action="./login.html" method="get">
+                    <label for="recoveremail">
+                        <input type="email" class="input" id="recoveremail" placeholder="ejemplo@mail.com" required>
+                    </label>
+                    <button class="login_btn" type="submit">Enviar</button>
+                </form>
             </div>
             <div class="create_acc">
-                <a class="register" href="#">CREAR CUENTA</a>
+                <a class="register" href="./index.html">CREAR CUENTA</a>
             </div>
-
         </section>
-
     </main>
 </body>
 </html>

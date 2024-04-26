@@ -10,29 +10,29 @@
     <header>
         <h1>Nombre del sitio</h1> 
     </header>
-    <main>
+    <main class="mainregistro">
             <div class="registro">
                 <h3>Registrar usuario</h3>
-                <form action="./home.html" method="get">
+                <form action="./home.html" method="get" class="registroform">
                     <label for="name">
-                        <input type="text" name="name" id="name" placeholder="Nombre" required>
+                        <input type="text" class="input" name="name" id="name" placeholder="Nombre" required>
                     </label>
                     <label for="lastname">
-                        <input type="text" name="lastname" id="lastname" placeholder="Apellido" required>
+                        <input type="text" class="input" name="lastname" id="lastname" placeholder="Apellido" required>
                     </label>
                     <label for="username">
-                        <input type="text" name="username" id="username" placeholder="Nombre de Usuario" required>
+                        <input type="text" class="input" name="username" id="username" placeholder="Nombre de Usuario" required>
                     </label>
                     <label for="pass">
-                        <input type="password" name="password" id="pass" placeholder="Contraseña" required>
+                        <input type="password" class="input" name="password" id="pass" placeholder="Contraseña" required>
                     </label>
                     <label for="repass">
-                        <input type="password" name="repass" id="repass" placeholder="Repetir contraseña" required>
+                        <input type="password" class="input" name="repass" id="repass" placeholder="Repetir contraseña" required>
                     </label>
                     <label for="mail">
-                        <input type="email" name="email" id="mail" placeholder="example@mail.com" required>    
+                        <input type="email" class="input" name="email" id="mail" placeholder="example@mail.com" required>    
                     </label>
-                      <span>Ya tienes una cuenta?</span><a href="./login.html" id="log">  Inicia sesión</a>
+                      <span>Ya tienes una cuenta? <a href="./login.html" id="log">  Inicia sesión</a> </span>
                         <section class="paymethod">
                             <span class="metodopago">Metodo de pago</span>
                             <label for="creddit_card">
