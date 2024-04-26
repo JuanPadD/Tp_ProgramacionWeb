@@ -2,6 +2,11 @@
     box-sizing: border-box;
     font-family:Arial, Helvetica, sans-serif;
 }
+
+a{
+    text-decoration: none;
+}
+
 .registro {
 background-color:rgb(10, 232, 66);
 justify-content: center;
@@ -188,26 +193,34 @@ body{
 /*-----------------------------------------------*/
 
 .home_header{
-    border: red solid 1px;
     display: flex;
     flex-direction: column;
 }
 
 .navbar .menu{
     list-style: none;
-    border: solid blue 1px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
     padding: 0;
     text-align: center;
+    background-color: gray;
+}
+
+.menu_link{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.25em;
 }
 
 .navbar .menu .menu_item{
     padding: 30px;
     width: 100%;
+    color: white;
 }
+
 
 .search_form{
     margin: 3em;
@@ -226,11 +239,7 @@ body{
     grid-auto-rows: auto;
     gap: 15px;
     margin: 6em 4em 3em 4em;
-  }
-  
-  .img_item {
-    border: 1px solid #ccc;
-  }
+  }  
   
   .img_item img {
     width: 100%;
