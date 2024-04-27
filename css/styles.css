@@ -4,7 +4,7 @@
     display: block;
     border-radius: 1em;
     padding-bottom: 0.5em;
-    width: 80%;
+    width: 50%;
     margin-top: 0;
     h3{
         color:#ffffff;
@@ -34,35 +34,87 @@
     a:hover{
         color: #02ffa1;
     }
+    } 
     
+    /*-------------------------------------------------
+    ------------------Registro------------------
+    /*-----------------------------------------------*/
+
+    .bodyregistro{
+        justify-content: center;
+        align-items: center;
     }
-    
+
+
+    .registroform{
+    justify-content: center;
+    align-items: center;
+
+    button{
+        display: flex;
+        background-color: #02ffa1;
+        text-transform: uppercase;
+        width: 9em;
+        height: 2.5em;
+        border-radius: 1.1ch;
+        font-weight:600;
+        font-size: 1.1em;
+        text-decoration: none;
+        align-content: center;
+        justify-content:center;
+        text-align: center;
+        color: black;
+        margin-top: 3%;
+    }
+    }
+
+    .regtrobutton{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #registrarbutton{
+        margin-right: 1em;
+        margin-top: 0%;
+    }
+
+    #cancelarbutton{
+    margin-left: 1em;
+    margin-top: 0%;
+    }
+
+
     .mainregistro{
+        display: flex;
         text-align: center;
         justify-content: center;
         align-items: center;
-        width: 100%;
+        width: 80%;
     }
     
     
     .paymethod{
-        background-color:#02ffa1;
-        border-top-right-radius: 5em;
-        border-bottom-left-radius: 5em;
-        border-top-left-radius: 1em;
-        border-bottom-right-radius: 1em;
-        width: auto;
+        display: grid;
+        background-color: #02ffa1; 
+        opacity: 80%;
+        border-radius: 2em;
+        width: 70%;
+        align-content: center;
+        margin: 15%;
+        margin-top: 1em;
+        margin-bottom: 1em;
     }
     
     #cbox1{
         margin-top: 0;
     }
-    
-    
-    /*h1{
-        text-align: center;
-    }*/
-    
+
+    #cbox3{
+        margin-left: 20%;
+    }
+
+
     h3{
         text-align: center;
         padding-top: 0.5em;
@@ -71,17 +123,6 @@
         font-style: oblique;
     }
     
-    /*form, label, section{
-        display: block;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        text-align: center;
-        padding: 0.1em;
-    }*/
-    
-    /*body{
-        margin: 0%;
-    }*/
     
     span{
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -96,13 +137,10 @@
         font-weight: 700;
     }
     
-    /*input{
-        margin-top: 0.01em;
-        border-radius: 0.5em;
-        border-color: transparent;
-        width: fit-content;
-    }*/
-    
+    .pagos{
+        display: block;
+        padding: 0.5em;
+    }
     
     /*-------------------------------------------------
     ------------------LOGIN & RECOVER------------------
