@@ -148,7 +148,7 @@
     
     
     body{
-        display: flex;
+        /*display: flex;*/
         background-color: black;
         margin:0;
         background-image: url(../img/vanishing-stripes.svg);
@@ -295,14 +295,15 @@
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: gray;
-}
+    /*background-color: gray;*/
+   }
 
 .menu_link{
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     letter-spacing: 0.25em;
+    text-decoration: none;
 }
 
 .navbar .menu .menu_item{
@@ -337,3 +338,45 @@
     display: block;
   }
   
+/*-------------------------------------------------
+-----------------------PERFIL----------------------
+/*-----------------------------------------------*/
+
+.profile_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: white;
+    margin-top: 10%;
+}
+
+.profile_info{
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-content: space-around;
+    align-items: flex-start;
+    p{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.user_info, .payment_info{
+    display: flex;
+    flex-direction: column;
+}
+.user_pic{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.user_pic img{
+    width: 35%;
+}
+
+/*.info_text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}*/
