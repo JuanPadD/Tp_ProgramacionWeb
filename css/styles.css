@@ -24,7 +24,7 @@
         justify-content: center;
         padding: 1em;
     }
-    
+
     a{
         padding-left: 0.5em;
         text-decoration: none;
@@ -36,6 +36,10 @@
     }
     } 
     
+    span.metodopago{
+    color: #000000;
+    }
+
     /*-------------------------------------------------
     ------------------Registro------------------
     /*-----------------------------------------------*/
@@ -43,6 +47,7 @@
     .bodyregistro{
         justify-content: center;
         align-items: center;
+        display: flex;
     }
 
 
@@ -95,7 +100,7 @@
     
     
     .paymethod{
-        display: grid;
+        display: block;
         background-color: #02ffa1; 
         opacity: 80%;
         border-radius: 2em;
@@ -140,6 +145,22 @@
     .pagos{
         display: block;
         padding: 0.5em;
+    }
+
+    label#tarjetadecredito.pagos{
+       display: grid;
+       justify-content: center;
+       align-items: center;
+    }
+
+    input#card_number{
+        margin-top: 0.5em;
+    }
+
+    input#sec_code{
+        margin-top: 0.5em;
+        width: 30%;
+        justify-self: center;
     }
     
     /*-------------------------------------------------
@@ -276,6 +297,9 @@
             color: #ff0160;
         }
 
+        button#cancelarbutton:hover{
+            background-color: #ff0160;
+        }
 
 
 /*-------------------------------------------------
