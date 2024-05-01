@@ -330,6 +330,11 @@
     text-decoration: none;
 }
 
+.menu_link:hover{
+    color: #02ffa1;
+    opacity: 80%;
+}
+
 .navbar .menu .menu_item{
     padding: 30px;
     width: 100%;
@@ -355,6 +360,10 @@
     gap: 15px;
     margin: 6em 4em 3em 4em;
   }  
+
+  .img_container img:hover{
+    opacity: 50%;
+  }
   
   .img_item img {
     width: 100%;
@@ -371,12 +380,14 @@
     flex-direction: row;
     justify-content: space-evenly;
     color: white;
-    margin-top: 10%;
+    margin-top: 8%;
+    margin-right: 10em;
+    margin-left: 10em;
 }
 
 .profile_info{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     width: 60%;
     justify-content: space-around;
     align-items: flex-start;
@@ -387,20 +398,71 @@
 }
 
 .user_info, .payment_info{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding-top: 1em;
+    margin-top: 1em;
+
+    p{
+        text-transform: uppercase;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    label{
+        padding-top: 0.5em;
+    }
+
 }
 .user_pic{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 7em;
 }
 .user_pic img{
     width: 35%;
 }
 
-/*.info_text{
+.info_text{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5rem;
-}*/
+    margin-top: 1em;
+}
+
+.changepass{
+    margin-left: 1em;
+}
+
+.savechanges, .cancelsuscription{
+    width: 50%;
+    margin-top: 2em;
+    justify-content: center;
+    justify-self: center;
+    background-color: #02ffa1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    border-radius: 1em;
+    padding: 1em;
+}
+
+.cancelsuscription:hover{
+    background-color: #ff0160;
+}
+
+/*-------------------------------------------------
+-----------------------Vista Pelis----------------------
+/*-----------------------------------------------*/
+
+
+.buttoncomenzar{
+    margin-left: 15em;
+    text-transform: uppercase;
+    border-radius: 1em;
+}
+
+.vista-peli-img{
+    margin-left: 1em;
+}

@@ -11,10 +11,10 @@
 <body class="profile">
     <nav class="navbar">
         <ul class="menu">
-            <li class="menu_item"><a class="menu_link" href="#home">HOME</a></li>
+            <li class="menu_item"><a class="menu_link" href="./home.html">HOME</a></li>
             <li class="menu_item"><a class="menu_link" href="#series">SERIES</a></li>
             <li class="menu_item"><a class="menu_link" href="#peliculas">PELÍCULAS</a></li>
-            <li class="menu_item"><a class="menu_link"href="#perfil">PERFIL</a></li>
+            <li class="menu_item"><a class="menu_link" href="./vista-perfil.html">PERFIL</a></li>
         </ul>
     </nav>
 
@@ -29,38 +29,32 @@
 
             <div class="user_info">
                 <p class="info_text">Email</p>
-                <p>email@email.com</p>
-                <label class="info_text" for="">Nueva contraseña<input type="text" placeholder="Ingrese nueva contraseña"></label>
-                <label class="info_text" for="">Repetir contraseña<input type="text" placeholder="Ingrese nueva contraseña"></label>
+                <p>Ejemploemail@email.com</p>
+                <label class="info_text" for="">Nueva contraseña
+                    <input type="password" placeholder="Ingrese nueva contraseña" class="changepass" required>
+                </label>
+                <label class="info_text" for="">Repetir contraseña
+                    <input type="password" placeholder="Ingrese nueva contraseña" class="changepass" required>
+                </label>
             </div>
 
             <div class="payment_info">
                     <p class="info_text">Método de pago</p>
 
-
-                    <label class="input" for="">Tarjeta de crédito<input type="radio"></label>
-                    <input type="text" placeholder="xxxxxxxxx">
-                    <input type="text" placeholder="xxxxxxx">
-
-            
-
-                    <label for="">Cupón de pago<input type="radio"></label>
-
-                    <label for="">Pago fácil<input type="checkbox" name="" id=""></label>
-                    
-                    <label for="">RapiPago<input type="checkbox" name="" id=""></label>
-                    
-
-                    <label for="">Transferencia bancaria<input type="radio"></label>
+                    <label class="input" for="">Tarjeta de crédito<input type="radio" name="paymethod"></label>
+                    <input type="number" placeholder="xxxxxxxxx">
+                    <input type="number" placeholder="xxxxxxx">
+                    <label for="">Cupón de pago<input type="radio" name="paymethod"></label>
+                    <label for="">Pago fácil<input type="radio" name="paymethod" id=""></label>                
+                    <label for="">RapiPago<input type="radio" name="paymethod" id=""></label>   
+                    <label for="">Transferencia bancaria<input type="radio" name="paymethod"></label>
                     <p>CBU : 0000000000000000</p>
             </div>
-
+            <button type="submit" class="savechanges">Guardar cambios</button>
+            <button type="submit" class="cancelsuscription">Cancelar suscripción</button>
         </form>
 
     </section>
-            
-    <button type="submit">Guardar cambios</button>
-    <button type="submit">Cancelar suscripción</button>
 </body>
 
 </html>
