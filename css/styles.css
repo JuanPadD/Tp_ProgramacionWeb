@@ -592,3 +592,10 @@
       }  
 }
 
+.savechanges_buttons_container{
+    display: flex;
+    .cancelsuscription{
+        margin-left: 1em;
+        height: auto;
+    }
+}
