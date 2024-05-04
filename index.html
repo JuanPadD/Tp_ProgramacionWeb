@@ -3,57 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
+    <title>Login</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body class="bodyregistro">
-    <header> </header>
-    <main class="mainregistro">
-            <div class="registro">
-                <h3>Registrar usuario</h3>
-                <form action="./home.html" method="get" class="registroform">
-                    <label for="name">
-                        <input type="text" class="input" name="name" id="name" placeholder="Nombre" required>
+<body>
+    <main class="login">
+        <section class="login_menu">
+            
+            <img src="./img/series-banner.png" alt="">
+
+            <div class="login_data">
+                <h1>Iniciar sesión</h1>
+
+                <form action="./home.html" method="get">
+                    <p class="login_input">Ingresa tu mail </p>
+                    <label >
+                        <input class="input" type="email" placeholder="ejemplo@mail.com" required>
                     </label>
-                    <label for="lastname">
-                        <input type="text" class="input" name="lastname" id="lastname" placeholder="Apellido" required>
+                    <p class="login_input">Ingresa tu contraseña</p>
+                    <label>
+                        <input class="input" type="password" placeholder="Ingrese Contraseña" required>
                     </label>
-                    <label for="username">
-                        <input type="text" class="input" name="username" id="username" placeholder="Nombre de Usuario" required>
-                    </label>
-                    <label for="pass">
-                        <input type="password" class="input" name="password" id="pass" placeholder="Contraseña" required>
-                    </label>
-                    <label for="repass">
-                        <input type="password" class="input" name="repass" id="repass" placeholder="Repetir contraseña" required>
-                    </label>
-                    <label for="mail">
-                        <input type="email" class="input" name="email" id="mail" placeholder="Example@mail.com" required>    
-                    </label>
-                      <span>Ya tienes una cuenta? <a href="./login.html" id="log">  Inicia sesión</a> </span>
-                        <section class="paymethod">
-                            <span class="metodopago">Metodo de pago</span>
-                            <label for="creddit_card" class="pagos" id="tarjetadecredito">
-                                <input type="radio" id="cbox1" name="mediodepago" value="1">Tarjeta de Crédito
-                               <input type="number" id="card_number" name="card_number" placeholder="Número de tarjeta" required>
-                              <input type="number" id="sec_code" name="sec_code" placeholder="CVV" required >
-                            </label>
-                            <label class="pagos">
-                                <input type="radio" id="cbox2" name="mediodepago" value="2">Pago Facil
-                                <input type="radio" id="cbox3" name="mediodepago" value="3">RapiPago
-                            </label>
-                            <label class="pagos">
-                                <input type="radio" id="cbox4"name="mediodepago" value="4">Transferencia bancaria
-                                <p>CBU: 0101010101010101</p>
-                            </label>
-                        </section>
-                        <div class="regtrobutton">
-                            <button type="submit" id="registrarbutton">Registrar</button>
-                             <button type="reset" id="cancelarbutton">Cancelar</button>
-                        </div>
-                </form>       
+                    <a href="./recover.html" class="forgot_pass">¿Olvidaste tu contraseña?</a>
+                    <button class="login_btn" type="submit">Iniciar Sesión</button>
+                </form>
             </div>
+            <div class="create_acc">
+                <a class="register" href="./create_acc.html">CREAR CUENTA</a>
+            </div>
+
+        </section>
+
     </main>
-    <footer></footer>
 </body>
 </html>
