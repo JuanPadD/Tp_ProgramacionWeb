@@ -148,18 +148,19 @@
     }
 
     label#tarjetadecredito.pagos{
-       display: grid;
+       display: flex;
        justify-content: center;
        align-items: center;
     }
 
     input#card_number{
-        margin-top: 0.5em;
+        margin-right: 0.5em;
+        margin-left: 0.5em;
     }
 
     input#sec_code{
-        margin-top: 0.5em;
-        width: 30%;
+        margin-left: 0.5em;
+        width: 10%;
         justify-self: center;
     }
     
