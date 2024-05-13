@@ -82,11 +82,13 @@
     #registrarbutton{
         margin-right: 1em;
         margin-top: 0%;
+        padding: 0.5rem;
     }
 
     #cancelarbutton{
     margin-left: 1em;
     margin-top: 0%;
+    padding: 0.5rem;
     }
 
 
@@ -606,7 +608,7 @@
 -----------------------@media mobile---------------
 /*-----------------------------------------------*/
 
-@media (max-width:767px){
+@media (max-width:1024px){
     *{
         margin: 0;
         padding: 0;
@@ -629,8 +631,8 @@
 
     }
     .login_data{
-        margin: 0;
         padding: 0 1rem;
+        margin-left: 1rem;
     }
     .login_data h1{
         font-size: 2.5rem;
@@ -643,12 +645,94 @@
         margin-top: 2rem;
     }
 
+    .input{
+        width: 100%;
+    }
 
-    /******RECUPERAR******/
 
+    /******Crear usuario******/
 
-
+.mainregistro{
+    width: 100%;
 }
+
+.paymethod{
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.pagos{
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+
+
+#cbox3{
+    margin: 0%;
+}
+}
+
+#tarjetadecredito{
+    width: 100%;
+
+    #card_number{
+        width: 95%;
+        margin: 0%;
+        margin-top: 0.1rem;
+    }
+
+    #sec_code{
+        width: 95%;
+        margin: 0%;
+        margin-top: 0.1rem;
+}    
+}
+
+.registroform span{
+    flex-direction: column;
+}
+
+.registroform a{
+    margin-top: 0.5rem;
+}
+
+.regtrobutton{
+    padding: 0.5rem;
+}
+
+ /******HOME******/
+
+.img_container{
+    display: flex;
+    flex-direction: column;
+}
+.select_container{
+    padding: 0;
+    margin-right: 1rem;
+}
+
+.search_container input{
+    width: auto;
+    text-align: center;
+}
+
+.menu{
+    flex-direction: column;
+}
+
+.search_form{
+    margin: 0;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-align: center;
+}
+
+} /*FIN QUERY MOBILE*/
 
 
 
@@ -663,3 +747,5 @@
 }
 
 @media (min-width:1024px){
+
+}
