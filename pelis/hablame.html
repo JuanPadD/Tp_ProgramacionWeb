@@ -12,6 +12,7 @@
     <header class="home_header">
         <nav class="navbar">
             <ul class="menu">
+                <li class="menu_item"><a href="../home.html"><img src="../img/logo.png" alt=""></a></li>
                 <li class="menu_item"><a class="menu_link" href="../home.html">HOME</a></li>
                 <li class="menu_item"><a class="menu_link" href="../vista-serie.html">SERIES</a></li>
                 <li class="menu_item"><a class="menu_link" href="../vista-pelicula.html">PELÍCULAS</a></li>
@@ -20,53 +21,65 @@
         </nav>
     </header>
     <main>
-        <section>
-            <div>
+        <section class="movie_view">
+            <article>
                 <div class="movie_container">
-                    <img src="../img/peliculacomedia1.jpg" alt="imagen_pelicula/serie" class="vista-peli-img">
                     <video controls autoplay>
                         <source src="..//video/Hablame _ Official Trailer HD _ A24.mp4" type="video/mp4">
                     </video>
-                    <button class="buttoncomenzar">Comenzar</button>
                 </div>
+                <form class="form_button" action="https://youtu.be/3ekSgOg4lQs?si=5x3JwdetMhg7yz4Z" method="get" target="_blank">
+                    <button class="buttoncomenzar" type="submit" >Comenzar</button>
+                </form>
+            </article>
 
-            </div>
-            <div class="description">
-                <div class="detail_movie">
-                    <h3>Título:</h3>
-                    <p>
-                        Hablame
-                    </p>
-                </div>
+            <article class="description">
                 <div>
                     <div class="detail_movie">
+                        <h3>Título:</h3>
+                            <p>Háblame</p>
+                    </div>
+                    <div class="detail_movie">
                         <h3>Género:</h3>
-                        <p>
-                            Género de pelicula
-                        </p>
+                            <p>Terror/ Terror sobrenatural</p>
                     </div>
                     <div class="detail_movie">
                         <h3>Actores:</h3>
-                        <p>
-                            Actor1 , Actor2 , Actor3
-                        </p>
+                            <p ><a target="_blank" class="name_actors" href="https://es.wikipedia.org/wiki/Sophie_Wilde">Sophie Wilde</a>, <a target="_blank" class="name_actors" href="https://es.wikipedia.org/wiki/Zoe_Terakes">Zoe Terakes</a> </p>
                     </div>
                 </div>
-            </div>
-            <div class="resume">
-                <h3>Sinapsis</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quibusdam labore doloremque excepturi error unde facilis ullam exercitationem. Ducimus ex repellat soluta nemo maxime eaque natus beatae. Placeat, quisquam earum!
-                    Aliquam quibusdam quisquam, architecto adipisci nihil provident minima neque itaque sunt sint fuga ea, deserunt possimus, dolorem facilis ipsa! Fugiat iste omnis magni illum eos fugit distinctio repellendus veritatis quam.
-                </p>
-            </div>
+
+                <div class="resume">
+                    <p>Mia piensa cada día en la muerte de su madre, fallecida en circunstancias poco claras. Un día, ella y su grupo de amigos encuentran una mano embalsamada que permite invocar a los espíritus, pero hay puertas que, una vez abiertas, no se pueden cerrar.
+                    </p>
+                </div>
+
+            </article>
+
         </section>
         <section class="recommendations ">
             <h2>Similares</h2>
             <div class="img_container">
-                <div class="img_item"><img src="../img/peliculaaccion1.jpg" alt=""></div>
-                <div class="img_item"><img src="../img/peliculacomedia1.jpg" alt=""></div>
-                <div class="img_item"><img src="../img/peliculacomedia2.jpg" alt=""></div>
-                <div class="img_item"><img src="../img/pelicularomance1.jpg" alt=""></div>
+                <div class="img_item">
+                    <a href="../pelis/Unaesposadementira.html">
+                        <img src="../img/peliculacomedia1.jpg" alt="Una esposa de mentira">
+                    </a>
+                </div>
+                <div class="img_item">
+                    <a href="../pelis/sick.html">
+                        <img src="../img/peliculaterror1.jpg" alt="Sick">
+                    </a>
+                </div>
+                <div class="img_item">
+                    <a href="../pelis/agentex.html">
+                        <img src="../img/peliculaaccion1.jpg" alt="Agente X">
+                    </a>
+                </div>
+                <div class="img_item">
+                    <a href="../pelis/venom.html">
+                        <img src="../img/peliculafantasia2.jpg" alt="Venom Carnage liberado">
+                    </a>
+                </div>
             </div>
         </section>
     </main>

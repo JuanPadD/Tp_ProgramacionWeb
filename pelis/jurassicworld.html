@@ -12,61 +12,75 @@
     <header class="home_header">
         <nav class="navbar">
             <ul class="menu">
+                <li class="menu_item"><a href="../home.html"><img src="../img/logo.png" alt=""></a></li>
                 <li class="menu_item"><a class="menu_link" href="../home.html">HOME</a></li>
-                <<li class="menu_item"><a class="menu_link" href="../vista-serie.html">SERIES</a></li>
+                <li class="menu_item"><a class="menu_link" href="../vista-serie.html">SERIES</a></li>
                 <li class="menu_item"><a class="menu_link" href="../vista-pelicula.html">PELÍCULAS</a></li>
                 <li class="menu_item"><a class="menu_link" href="../vista-perfil.html">PERFIL</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
-            <div>
+        <section class="movie_view">
+            <article>
                 <div class="movie_container">
-                    <img src="../img/peliculacomedia1.jpg" alt="imagen_pelicula/serie" class="vista-peli-img">
                     <video controls autoplay>
                         <source src="..//video/Jurassic World Dominion - Official Trailer [HD].mp4" type="video/mp4">
                     </video>
-                    <button class="buttoncomenzar">Comenzar</button>
                 </div>
+                <form class="form_button" action="https://www.primevideo.com/dp/amzn1.dv.gti.cea2587f-29f8-4cfb-ac27-5a366cc221f9?autoplay=0&ref_=atv_cf_strg_wb" method="get" target="_blank">
+                    <button class="buttoncomenzar" type="submit" >Comenzar</button>
+                </form>
+            </article>
 
-            </div>
-            <div class="description">
-                <div class="detail_movie">
-                    <h3>Título:</h3>
-                    <p>
-                        Jurassic World
-                    </p>
-                </div>
+            <article class="description">
                 <div>
                     <div class="detail_movie">
+                        <h3>Título:</h3>
+                            <p>Jurassic World: Dominio</p>
+                    </div>
+                    <div class="detail_movie">
                         <h3>Género:</h3>
-                        <p>
-                            Género de pelicula
-                        </p>
+                            <p>Acción/ Ciencia ficción</p>
                     </div>
                     <div class="detail_movie">
                         <h3>Actores:</h3>
-                        <p>
-                            Actor1 , Actor2 , Actor3
-                        </p>
+                            <p ><a target="_blank" class="name_actors" href="https://es.wikipedia.org/wiki/Chris_Pratt">Chris Pratt</a>, <a target="_blank" class="name_actors" href="https://es.wikipedia.org/wiki/Bryce_Dallas_Howard">Bryce Dallas Howard</a> </p>
                     </div>
                 </div>
-            </div>
-            <div class="resume">
-                <h3>Sinapsis</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quibusdam labore doloremque excepturi error unde facilis ullam exercitationem. Ducimus ex repellat soluta nemo maxime eaque natus beatae. Placeat, quisquam earum!
-                    Aliquam quibusdam quisquam, architecto adipisci nihil provident minima neque itaque sunt sint fuga ea, deserunt possimus, dolorem facilis ipsa! Fugiat iste omnis magni illum eos fugit distinctio repellendus veritatis quam.
-                </p>
-            </div>
+
+                <div class="resume">
+                    <p>La isla Nublar y su parque han sido destruidos, pero el problema no se terminó. Con los dinosaurios dispersos por todo el mundo, la convivencia entre el presente y el pasado alcanza un nuevo nivel de tensión.
+                    </p>
+                </div>
+
+            </article>
+
         </section>
+
         <section class="recommendations ">
             <h2>Similares</h2>
             <div class="img_container">
-                <div class="img_item"><img src="../img/peliculaaccion1.jpg" alt=""></div>
-                <div class="img_item"><img src="../img/peliculacomedia1.jpg" alt=""></div>
-                <div class="img_item"><img src="../img/peliculacomedia2.jpg" alt=""></div>
-                <div class="img_item"><img src="../img/pelicularomance1.jpg" alt=""></div>
+                <div class="img_item">
+                    <a href="../pelis/Unaesposadementira.html">
+                        <img src="../img/peliculacomedia1.jpg" alt="Una esposa de mentira">
+                    </a>
+                </div>
+                <div class="img_item">
+                    <a href="../pelis/sick.html">
+                        <img src="../img/peliculaterror1.jpg" alt="Sick">
+                    </a>
+                </div>
+                <div class="img_item">
+                    <a href="../pelis/ted.html">
+                        <img src="../img/peliculacomedia2.jpg" alt="Ted">
+                    </a>
+                </div>
+                <div class="img_item">
+                    <a href="../pelis/oneday.html">
+                        <img src="../img/pelicularomance1.jpg" alt="One Day">
+                    </a>
+                </div>
             </div>
         </section>
     </main>

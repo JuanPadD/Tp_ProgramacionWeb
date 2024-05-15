@@ -12,6 +12,7 @@
     <header class="home_header">
         <nav class="navbar">
             <ul class="menu">
+                <li class="menu_item"><a href="../home.html"><img src="../img/logo.png" alt=""></a></li>
                 <li class="menu_item"><a class="menu_link" href="../home.html">HOME</a></li>
                 <li class="menu_item"><a class="menu_link" href="../vista-serie.html">SERIES</a></li>
                 <li class="menu_item"><a class="menu_link" href="../vista-pelicula.html">PELÍCULAS</a></li>
@@ -20,77 +21,86 @@
         </nav>
     </header>
     <main>
-        <section>
-            <div>
+        <section class="movie_view">
+            <article>
                 <div class="movie_container">
-                    <img src="../img/seriecomedia1.jpg" alt="imagen_pelicula/serie" class="vista-peli-img">
                     <video controls autoplay>
-                        <source src="..//video/Fallout - Official Trailer _ Prime Video.mp4">
+                        <source src="../video/Fallout - Official Trailer _ Prime Video.mp4" type="video/mp4">
                     </video>
-                    <button class="buttoncomenzar">Comenzar</button>
                 </div>
+                <form class="form_button" action="https://www.primevideo.com/detail/0H65SELFYQNNW2SNLDGEOSFZXJ/ref=atv_dl_rdr" method="get" target="_blank">
+                    <button class="buttoncomenzar" type="submit" >Comenzar</button>
+                </form>
+            </article>
 
-            </div>
-            <div class="description">
-                <div class="temp_cap_selector">
-                    <div class="select_container">
-                        <label for="select_category">Temporada</label>
-                        <select name="select_category" class="select_category">
-                            <option value=“1”>1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                    </div>
-
-                    <div class="select_container">
-                        <label for="select_category">Capítulo</label>
-                        <select name="select_category" class="select_category">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="detail_movie">
-                    <h3>Título:</h3>
-                    <p>
-                        Fallout
-                    </p>
-                </div>
+            <article class="description">
                 <div>
                     <div class="detail_movie">
+                        <h3>Título:</h3>
+                            <p>Fall Out</p>
+                    </div>
+                    <div class="temp_cap_selector">
+                        <div class="select_container">
+                            <label for="select_category">Temporada</label>
+                            <select name="select_category" class="select_category">
+                                <option value=“0”>Seleccionar</option>
+                                <option value=“1”>1</option>
+                            </select>
+                        </div>
+    
+                        <div class="select_container">
+                            <label for="select_category">Capítulo</label>
+                            <select name="select_category" class="select_category">
+                                <option value=“0”>Capítulo</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="detail_movie">
                         <h3>Género:</h3>
-                        <p>
-                            Género de Serie
-                        </p>
+                            <p>Acción/ Drama/Ciencia Ficción</p>
                     </div>
                     <div class="detail_movie">
                         <h3>Actores:</h3>
-                        <p>
-                            Actor1 , Actor2 , Actor3
-                        </p>
+                            <p ><a target="_blank" class="name_actors" href="https://es.wikipedia.org/wiki/Ella_Purnell">Ella Purnell</a>, <a target="_blank" class="name_actors" href="https://en.wikipedia.org/wiki/Aaron_Moten">Aaron Moten</a></p>
                     </div>
                 </div>
+
                 <div class="resume">
-                    <h3>Sinapsis</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quibusdam labore doloremque excepturi error unde facilis ullam exercitationem. Ducimus ex repellat soluta nemo maxime eaque natus beatae. Placeat, quisquam earum!
-                        Aliquam quibusdam quisquam, architecto adipisci nihil provident minima neque itaque sunt sint fuga ea, deserunt possimus, dolorem facilis ipsa! Fugiat iste omnis magni illum eos fugit distinctio repellendus veritatis quam.
+                    <p>Fallout es una serie de televisión postapocalíptica desarrollada por Lisa Joy y Jonathan Nolan para el servicio de vídeo por demanda Amazon Prime Video. Está basada en la franquicia de videojuegos de rol del mismo nombre creada por Black Isle Studios y actualmente propiedad de Bethesda Softworks; los protagonistas principales son Ella Purnell, Aaron Moten, Kyle MacLachlan, Moisés Arias, Xelia Mendes-Jones y Walton Goggins.
                     </p>
                 </div>
-            </div>
+
+            </article>
 
         </section>
         <section class="recommendations ">
             <h2>Similares</h2>
             <div class="img_container">
-                <div class="img_item"><img src="../img/peliculaaccion1.jpg" alt=""></div>
-                <div class="img_item"><img src="../img/peliculacomedia1.jpg" alt=""></div>
-                <div class="img_item"><img src="../img/peliculacomedia2.jpg" alt=""></div>
-                <div class="img_item"><img src="../img/pelicularomance1.jpg" alt=""></div>
+                <div class="img_item">
+                    <a href="../series/wd-theonewholives.html">
+                        <img src="../img/serieterror1.jpg" alt="WD - The one who lives">
+                    </a>
+                </div>
+                <div class="img_item">
+                    <a href="../series/onetreehill.html">
+                        <img src="../img/serieromance2.jpg" alt="One Tree Hill">
+                    </a>
+                </div>
+                <div class="img_item">
+                    <a href="../series/elveranoquemeenamore.html">
+                        <img src="../img/serieromance1.jpg" alt="El Verano que me Enamore">
+                    </a>
+                </div>
+                <div class="img_item">
+                    <a href="../series/theboys.html">
+                        <img src="../img/seriecomedia1.jpg" alt="TheBoys">
+                    </a>           
+                </div>
             </div>
         </section>
     </main>

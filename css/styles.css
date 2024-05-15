@@ -392,6 +392,10 @@
     }
 }
 
+.select_category_home{
+    margin-left: 1em;
+}
+
 /*-------------------------------------------------
 -----------------------PERFIL----------------------
 /*-----------------------------------------------*/
@@ -481,115 +485,128 @@
 
 
 .buttoncomenzar{
-    margin-left: 12em;
     text-transform: uppercase;
     border-radius: 1em;
-    width: 12em;
     font-family: Arial, Helvetica, sans-serif;
+    width: 25%;
+    padding: 1em;
+    margin-top: 2em;
 }
 
 .buttoncomenzar:hover{
-    background-color: #02ffa1;
-    font-weight: 600;
+background-color: #02ffa1;
+font-weight: 600;
 }
 
 .vista-peli-img{
-    margin-left: 1em;
+margin-left: 1em;
+}
+
+.movie_view{
+ display: flex;
+ width: 100%;
+ margin-top: 2em;
+
+ article{
+    width: 50%;
+ }
+
+ .form_button{
+    display: flex;
+    justify-content: center;
+ }
 }
 
 .movie_container{
-    position: relative;
-    justify-content:left;
-    grid-template-rows: repeat(2, auto);
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
-    video{
-    object-fit: cover;
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    align-self: center;
-    justify-self: center;
-    }
+display: flex;
+justify-content: center;
 
-    .vista-peli-img{
-        display: block;
-    }
+video{
+width: 75%;
+border: solid #3b3b3b;
 }
 
-.description{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
-    h3{
-        text-align: left;
-    }
+.vista-peli-img{
+    display: block;
 }
+}
+
 
 .temp_cap_selector{
-    padding-left: 2em;
-    display: flex;
-    padding-top: 1.5em;
+display: flex;
+margin: 12px 0px;
+justify-content: space-between;
+width: 50%;
+
+h3{
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin: 0;
+}
 }
 
 .select_container{
-    padding: 1em;
+display: flex;
 
-    label{
-        font-family: Arial, Helvetica, sans-serif;
-        text-transform: uppercase;
-        font-weight: 700;
-    } 
+label{
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 24px;
+} 
 }
 
 .select_category{
-    margin-left: 1em;
+border-radius: 0.5em;
+margin-left: 0.5em;
 }
 
 .detail_movie{
-    justify-content: center;
-    display: flex;
-    align-items: baseline;
-    margin-left: 3em;
+display: flex;
+align-items: baseline;
 
-    p{
-        margin-left: 1em;
-        text-transform: uppercase;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: 700;
-    }
+p{
+    margin-left: 1em;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
 
-    h3{
-        text-transform: uppercase;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: 700;
-        font-style:normal;
-    }
+h3{
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-style:normal;
+    margin: 0;
+}
+
+.name_actors{
+    text-decoration: none;
+    color: white;
+}
 }
 
 .resume{
-    align-items: baseline;
-    margin-right: 3em;
+align-items: baseline;
+width: 85%;
+margin-right: 3em;
 
-    p{
-        text-transform: uppercase;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: 700;
-        margin-right: 3em;
-        margin-left: 3em;
-        text-align: center;
-    }
+p{
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
 
-    h3{
-        text-align: center;
-        text-transform: uppercase;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: 400;
-        font-style:normal;
-    }
+h3{
+    text-align: left;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style:normal;
+}
 }
 
 .recommendations{
@@ -726,7 +743,7 @@
     display: flex;
     flex-direction: column;
 }
-.select_container{
+.select_container_home{
     padding: 0;
     margin-right: 1rem;
 }
@@ -783,6 +800,27 @@
 
  /******Vista Pelis y series******/
 
+.movie_view{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+        article{
+            width: 90%;
+        }
+}
+
+.detail_movie{
+    display: flex;
+    margin: 1em 0em;
+    align-items: flex-end;
+}
+
+.buttoncomenzar{
+    width: auto;
+}
+
 .movie_container video{
     width: 100%;
     height: 50vh;
@@ -795,10 +833,15 @@
 .description{
     display: flex;
     flex-direction: column;
+    margin-top: 2rem;
 }
 
 .resume{
     margin: 0;
+
+    p{
+        margin-top: 1em;
+    }
 }
 
 
@@ -813,12 +856,21 @@
 
 }
 
-
-
-.description{
-    text-align: center;
-    margin-top: 8rem;
+.temp_cap_selector{
+    display: flex;
+    flex-direction: column;
 }
+
+.select_container{
+
+    display: flex;
+    align-items: baseline;
+
+        label{
+            margin-top: 1em;
+        }
+}
+
 
 
 
