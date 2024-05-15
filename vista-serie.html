@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
-    <title>Flimpop - Series</title>
+    <title>Flimpop</title>
     <link rel="icon" type="image" href="./img/favicon.ico">
 </head>
 
@@ -15,84 +15,70 @@
             <ul class="menu">
                 <li class="menu_item"><a href="./home.html"><img src="./img/logo.png" alt=""></a></li>
                 <li class="menu_item"><a class="menu_link" href="./home.html">HOME</a></li>
-                <li class="menu_item"><a class="menu_link" href="#series">SERIES</a></li>
-                <li class="menu_item"><a class="menu_link" href="#peliculas">PELÍCULAS</a></li>
-                <li class="menu_item"><a class="menu_link" href=".//vista-perfil.html">PERFIL</a></li>
+                <li class="menu_item"><a class="menu_link" href="./vista-serie.html">SERIES</a></li>
+                <li class="menu_item"><a class="menu_link" href="./vista-pelicula.html">PELÍCULAS</a></li>
+                <li class="menu_item"><a class="menu_link" href="./vista-perfil.html">PERFIL</a></li>
             </ul>
         </nav>
+        <form action="" class="search_form">
+            <div class="select_container">
+                <label for="select_category">Categorías</label>
+                <select name="select_category" id="select_category">
+                    <option value=“comedy”>Comedia</option>
+                    <option value="romance">Romance</option>
+                    <option value="horror">Terror</option>
+                    <option value="action">Acción</option>
+                    <option value="fantasy">Fantasía</option>
+                </select>
+            </div>
+            <div class="search_container">
+                <input type="search" value="Buscar por nombre">
+            </div>
+        </form>
     </header>
     <main>
         <section>
-            <div>
-                <div class="movie_container">
-                    <img src="./img/peliculafantasia1.jpg" alt="imagen_pelicula/serie" class="vista-peli-img">
-                    <video controls autoplay>
-                        <source src=".//video/Jurassic World Dominion - Official Trailer [HD].mp4" type="video/mp4">
-                    </video>
-                    <button class="buttoncomenzar">Comenzar</button>
-                </div>
-
-            </div>
-            <div class="description">
-                <div class="temp_cap_selector">
-                    <div class="select_container">
-                        <label for="select_category">Temporada</label>
-                        <select name="select_category" class="select_category">
-                            <option value=“1”>1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                    </div>
-
-                    <div class="select_container">
-                        <label for="select_category">Capítulo</label>
-                        <select name="select_category" class="select_category">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="detail_movie">
-                    <h3>Título:</h3>
-                    <p>
-                        Titulo de pelicula
-                    </p>
-                </div>
-                <div>
-                    <div class="detail_movie">
-                        <h3>Género:</h3>
-                        <p>
-                            Género de pelicula
-                        </p>
-                    </div>
-                    <div class="detail_movie">
-                        <h3>Actores:</h3>
-                        <p>
-                            Actor1 , Actor2 , Actor3
-                        </p>
-                    </div>
-                </div>
-                <div class="resume">
-                    <h3>Sinapsis</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quibusdam labore doloremque excepturi error unde facilis ullam exercitationem. Ducimus ex repellat soluta nemo maxime eaque natus beatae. Placeat, quisquam earum!
-                        Aliquam quibusdam quisquam, architecto adipisci nihil provident minima neque itaque sunt sint fuga ea, deserunt possimus, dolorem facilis ipsa! Fugiat iste omnis magni illum eos fugit distinctio repellendus veritatis quam.
-                    </p>
-                </div>
-            </div>
-
-        </section>
-        <section class="recommendations ">
-            <h2>Similares</h2>
             <div class="img_container">
-                <div class="img_item"><img src="./img/peliculaaccion1.jpg" alt=""></div>
-                <div class="img_item"><img src="./img/peliculacomedia1.jpg" alt=""></div>
-                <div class="img_item"><img src="./img/peliculacomedia2.jpg" alt=""></div>
-                <div class="img_item"><img src="./img/pelicularomance1.jpg" alt=""></div>
+                <div class="img_item">
+                    <a href="./series/theboys.html">
+                        <img src="./img/seriecomedia1.jpg" alt="TheBoys">
+                    </a>           
+                </div>
+                <div class="img_item">
+                    <a href="./series/elveranoquemeenamore.html">
+                        <img src="./img/serieromance1.jpg" alt="El Verano que me Enamore">
+                    </a>
+                </div>
+                <div class="img_item">
+                    <a href="./series/onetreehill.html">
+                        <img src="./img/serieromance2.jpg" alt="One Tree Hill">
+                    </a>
+                </div>
+                <div class="img_item">
+                    <a href="./series/wd-theonewholives.html">
+                        <img src="./img/serieterror1.jpg" alt="WD - The one who lives">
+                    </a>
+                </div>
+                <div class="img_item">
+                    <a href="./series/fallout.html">
+                        <img src="./img/serieaccion1.jpg" alt="Fallout">
+                    </a>
+                </div>
+                <div class="img_item">
+                    <a href="./series/swat.html">
+                        <img src="./img/serieaccion2.jpg" alt="S.W.A.T">
+                    </a>
+                </div>
+                <div class="img_item">
+                    <a href="./series/worldbeyond.html">
+                        <img src="./img/seriefantasia1.jpg" alt="Walking Dead - World Beyond">
+                    </a>
+                </div>
+                <div class="img_item">
+                    <a href="./series/shameless.html">
+                        <img src="./img/seriecomedia2.jpg" alt="Shameless">
+                    </a>
+                </div>
             </div>
         </section>
     </main>
