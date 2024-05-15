@@ -351,6 +351,8 @@
     padding: 30px;
     width: 100%;
     color: white;
+}img{
+    height: 40px;
 }
 
 
@@ -436,15 +438,17 @@
 
 }
 .user_pic{
+    margin:0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 7em;
-}
-.user_pic img{
+}img{
+    height: auto;
     width: 35%;
 }
+
 
 .info_text{
     font-family: Arial, Helvetica, sans-serif;
@@ -748,9 +752,6 @@
     flex-direction: column;
 }
 
-.user_pic{
-    margin: 0;
-}
 
 .profile_info{
     display: flex;
@@ -772,6 +773,10 @@
 
 .payment_info{
     text-align: center;
+}
+
+.user_pic{
+    margin-bottom: 2em;
 }
 
  /******Vista Pelis y series******/
