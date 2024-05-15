@@ -770,6 +770,10 @@
     width: 100%;
     }
 
+.movie_container img{
+    overflow: hidden;
+}
+
 .description{
     display: flex;
     flex-direction: column;
@@ -780,7 +784,16 @@
 }
 
 
+.recommendations{
+    display: flex;
+    flex-direction: column;
+   
+    .img_container{
+        display: flex;
+        margin: 0 1rem;
+    }
 
+}
 
 
 
