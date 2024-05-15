@@ -12,6 +12,7 @@
     <header class="home_header">
         <nav class="navbar">
             <ul class="menu">
+                <li class="menu_item"><a href="../home.html"><img src="../img/logo.png" alt=""></a></li>
                 <li class="menu_item"><a class="menu_link" href="../home.html">HOME</a></li>
                 <li class="menu_item"><a class="menu_link" href="../vista-serie.html">SERIES</a></li>
                 <li class="menu_item"><a class="menu_link" href="../vista-pelicula.html">PELÍCULAS</a></li>
@@ -20,77 +21,96 @@
         </nav>
     </header>
     <main>
-        <section>
-            <div>
+        <section class="movie_view">
+            <article>
                 <div class="movie_container">
-                    <img src="../img/seriecomedia1.jpg" alt="imagen_pelicula/serie" class="vista-peli-img">
                     <video controls autoplay>
-                        <source src="..//video/Shameless Season 1 Trailer.mp4">
+                        <source src="../video/Shameless Season 1 Trailer.mp4" type="video/mp4">
                     </video>
-                    <button class="buttoncomenzar">Comenzar</button>
                 </div>
+                <form class="form_button" action="https://www.primevideo.com/detail/0QOJYRRWSHRX71230TMJSYJT3O/ref=atv_dl_rdr" method="get" target="_blank">
+                    <button class="buttoncomenzar" type="submit" >Comenzar</button>
+                </form>
+            </article>
 
-            </div>
-            <div class="description">
-                <div class="temp_cap_selector">
-                    <div class="select_container">
-                        <label for="select_category">Temporada</label>
-                        <select name="select_category" class="select_category">
-                            <option value=“1”>1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                    </div>
-
-                    <div class="select_container">
-                        <label for="select_category">Capítulo</label>
-                        <select name="select_category" class="select_category">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="detail_movie">
-                    <h3>Título:</h3>
-                    <p>
-                        Shameless
-                    </p>
-                </div>
+            <article class="description">
                 <div>
                     <div class="detail_movie">
+                        <h3>Título:</h3>
+                            <p>Shameless</p>
+                    </div>
+                    <div class="temp_cap_selector">
+                        <div class="select_container">
+                            <label for="select_category">Temporada</label>
+                            <select name="select_category" class="select_category">
+                                <option value=“0”>Seleccionar</option>
+                                <option value=“1”>1</option>
+                                <option value="2">2</option>
+                                <option value=“3”>3</option>
+                                <option value="4">4</option>
+                                <option value=“5”>5</option>
+                                <option value="6">6</option>
+                                <option value=“7”>7</option>
+                                <option value="8">8</option>
+                                <option value=“9”>9</option>
+                                <option value="10">10</option>
+                                <option value=“11”>11</option>
+                            </select>
+                        </div>
+    
+                        <div class="select_container">
+                            <label for="select_category">Capítulo</label>
+                            <select name="select_category" class="select_category">
+                                <option value=“0”>Capítulo</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="detail_movie">
                         <h3>Género:</h3>
-                        <p>
-                            Género de Serie
-                        </p>
+                            <p>Comedia dramatica</p>
                     </div>
                     <div class="detail_movie">
                         <h3>Actores:</h3>
-                        <p>
-                            Actor1 , Actor2 , Actor3
-                        </p>
+                            <p ><a target="_blank" class="name_actors" href="https://es.wikipedia.org/wiki/William_H._Macy">William H. Macy</a>, <a target="_blank" class="name_actors" href="https://es.wikipedia.org/wiki/Jeremy_Allen_White">Jeremy Allen White</a></p>
                     </div>
                 </div>
+
                 <div class="resume">
-                    <h3>Sinapsis</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quibusdam labore doloremque excepturi error unde facilis ullam exercitationem. Ducimus ex repellat soluta nemo maxime eaque natus beatae. Placeat, quisquam earum!
-                        Aliquam quibusdam quisquam, architecto adipisci nihil provident minima neque itaque sunt sint fuga ea, deserunt possimus, dolorem facilis ipsa! Fugiat iste omnis magni illum eos fugit distinctio repellendus veritatis quam.
+                    <p>Shameless es una serie de televisión estadounidense de comedia dramática desarrollada por John Wells que debutó en Showtime el 9 de enero de 2011 y finalizó el 11 de abril de 2021. Es una adaptación de la serie británica del mismo nombre de Paul Abbott y cuenta con un elenco encabezado por William H. Macy y Emmy Rossum. El programa está ambientado en el Lado Sur de Chicago y se filma en toda la ciudad, así como en Los Ángeles.
                     </p>
                 </div>
-            </div>
+
+            </article>
 
         </section>
         <section class="recommendations ">
             <h2>Similares</h2>
             <div class="img_container">
-                <div class="img_item"><img src="../img/peliculaaccion1.jpg" alt=""></div>
-                <div class="img_item"><img src="../img/peliculacomedia1.jpg" alt=""></div>
-                <div class="img_item"><img src="../img/peliculacomedia2.jpg" alt=""></div>
-                <div class="img_item"><img src="../img/pelicularomance1.jpg" alt=""></div>
+                <div class="img_item">
+                    <a href="../series/worldbeyond.html">
+                        <img src="../img/seriefantasia1.jpg" alt="Walking Dead - World Beyond">
+                    </a>
+                </div>
+                <div class="img_item">
+                    <a href="../series/elveranoquemeenamore.html">
+                        <img src="../img/serieromance1.jpg" alt="El Verano que me Enamore">
+                    </a>
+                </div>
+                <div class="img_item">
+                    <a href="../series/theboys.html">
+                        <img src="../img/seriecomedia1.jpg" alt="TheBoys">
+                    </a>           
+                </div>
+                <div class="img_item">
+                    <a href="../series/onetreehill.html">
+                        <img src="../img/serieromance2.jpg" alt="One Tree Hill">
+                    </a>
+                </div>
             </div>
         </section>
     </main>
