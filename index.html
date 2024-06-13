@@ -20,14 +20,14 @@
                 <form action="./home.html" method="get">
                     <p class="login_input">Ingresa tu mail </p>
                     <label >
-                        <input class="input" type="email" placeholder="ejemplo@mail.com" required>
+                        <input id="loggin_mail" class="input" type="email" placeholder="ejemplo@mail.com" required>
                     </label>
                     <p class="login_input">Ingresa tu contraseña</p>
                     <label>
-                        <input class="input" type="password" placeholder="Ingrese Contraseña" required>
+                        <input id="loggin_password" class="input" type="password" placeholder="Ingrese Contraseña" required>
                     </label>
                     <a href="./recover.html" class="forgot_pass">¿Olvidaste tu contraseña?</a>
-                    <button class="login_btn" type="submit">Iniciar Sesión</button>
+                    <button id="login_btn" class="login_btn" type="submit">Iniciar Sesión</button>
                 </form>
             </div>
             <div class="create_acc">
@@ -37,5 +37,7 @@
         </section>
 
     </main>
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/registro.js"> </script>
 </body>
 </html>
