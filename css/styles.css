@@ -908,3 +908,20 @@ h3{
 @media (min-width:1024px){
 
 }
+
+/*---------------------------------------------clases para JS -------------------------------------------*/
+
+.ocultar{
+    display: none;
+}
+
+/* Usar una clase específica */
+.no-spin-buttons::-webkit-inner-spin-button,
+.no-spin-buttons::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.no-spin-buttons {
+    -moz-appearance: textfield;
+}
