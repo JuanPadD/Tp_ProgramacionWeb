@@ -11,7 +11,6 @@ LOGGIN_BUTTON.addEventListener('click', function(event){
     validarMail(campo_mail_valor);
     let campo_clave_valor = CAMPO_CLAVE.value;
     validarClave(campo_clave_valor);
-    // console.log("boton"); PARA VER QUE FUNCIONE. (REVISAR EL VERIFY TRUE UNA VEZ QUE SE PUEDA REGISTRAR USUARIOS)
     if (verify === true){
         event.submit;
     }
@@ -40,7 +39,7 @@ function validarMail(campo){
     }
 }
 
-    function validarClave(campo){
+function validarClave(campo){
         if(campo === ""){
             CAMPO_CLAVE.setCustomValidity("El campo no puede estar vacio.")
             CAMPO_CLAVE.reportValidity();
