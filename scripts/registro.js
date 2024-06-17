@@ -18,6 +18,7 @@ let verify = false;
 const REGEX_SOLO_LETRAS = /^[A-Za-z]+$/;
 const REGEX_ALFANUMERICO = /^[A-Za-z0-9]+$/;
 const REGEX_CLAVE = /^(?=(.*[A-Za-z]){2})(?=(.*[0-9]){2})(?=(.*[!@#$%^&*(),.?":{}|<>]){2}).{8}$/
+const REGEX_MAIL = /^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/;
 let nuevo_nombre_usuario; // VARIABLE PARA GENERAR EL NUEVO USUARIO Y PASARLA POR PARAMETRO AL CONSTRUCTOR
 let nuevo_apellido_usuario; // VARIABLE PARA GENERAR EL NUEVO USUARIO Y PASARLA POR PARAMETRO AL CONSTRUCTOR
 let nuevo_username_usuario; // VARIABLE PARA GENERAR EL NUEVO USUARIO Y PASARLA POR PARAMETRO AL CONSTRUCTOR
@@ -41,13 +42,13 @@ class Usuario {
 
 BOTON_REGISTRAR.addEventListener('click', function(event) {
     let usuariosGuardados = JSON.parse(localStorage.getItem('USUARIOS')) || [];
-    verificarCondicionesNombre(this.nombre)
-    verificarCondicionesApellido(this.apellido)
-    verificarDisponibilidadDeNombreDeUsuario(this.username)
-    verificarCondicionesPassword(this.password)
-    verificarCondicionesPassword(this.repass)
-    verificarIgualdadEnClaves(this.password, this.repass)
-    validarMail(this.email);
+    verificarCondicionesNombre()
+    verificarCondicionesApellido()
+    verificarDisponibilidadDeNombreDeUsuario()
+    verificarCondicionesPassword()
+    verificarCondicionesPassword()
+    verificarIgualdadEnClaves()
+    validarMail();
 
 
 
@@ -73,7 +74,7 @@ function verificarCondicionesNombre(){
         }else{
             CAMPO_NOMBRE.setCustomValidity("")
             CAMPO_NOMBRE.reportValidity();
-            nuevo_nombre_usuario = nombre;
+            nuevo_nombre_usuario = nameValue;
             verify = true;
             console.log("Campo nombre completado correctamente")
         }
@@ -92,7 +93,7 @@ function verificarCondicionesApellido(){
         }else{
             CAMPO_APELLIDO.setCustomValidity("")
             CAMPO_APELLIDO.reportValidity();
-            nuevo_apellido_usuario = apellido;
+            nuevo_apellido_usuario = lastnamenameValue;
             verify = true;
             console.log("Campo apellido completado correctamente")
         }
@@ -117,7 +118,7 @@ function verificarDisponibilidadDeNombreDeUsuario(){
     }else{
         CAMPO_USERNAME.setCustomValidity("");
         CAMPO_USERNAME.reportValidity();
-        nuevo_nombre_usuario = username;
+        nuevo_nombre_usuario = usernameValue;
         verify = false
         console.log("Campo usuario completado correctamente")
     }
@@ -129,14 +130,14 @@ function verificarCondicionesPassword(){
         CAMPO_CLAVE.setCustomValidity("El campo no puede estar vacio");
         CAMPO_CLAVE.reportValidity();
         verify = false;
-    }else if(!REGEX_CLAVE.test(clave)){
+    }else if(!REGEX_CLAVE.test(passwordValue)){
         CAMPO_CLAVE.setCustomValidity("El campo debe contener al menos 2 Letras, 2 números y 2 caracteres especiales. Y debe ser de 8 digitos.");
         CAMPO_CLAVE.reportValidity();
         verify = false;
     }else{
         CAMPO_CLAVE.setCustomValidity("");
         CAMPO_CLAVE.reportValidity();
-        nuevo_password_usuario = clave;
+        nuevo_password_usuario = passwordValue;
         verify = true; 
         console.log("clave generada correctamente.")
     }
@@ -159,6 +160,8 @@ function verificarIgualdadEnClaves(){
         verify = false;
     }else if(passwordValue === repasswordValue){
         console.log("clave y reclave coinciden.")
+        CAMPO_REP_CLAVE.setCustomValidity("")
+        CAMPO_REP_CLAVE.reportValidity();
         verify = true;
     }
 }
@@ -176,12 +179,14 @@ function validarMail(){
     }else{
         let usuariosGuardados = JSON.parse(localStorage.getItem('USUARIOS')) || [];
         let usuarioEncontrado = usuariosGuardados.find(usuario => usuario.email === campo);
-
         if(usuarioEncontrado){
             console.log("Usuario encontrado:", usuarioEncontrado);
-            verify = true;
+            verify = false;
         } else {
-            console.log("Correo no registrado");
+            console.log("Correo nuevo registrado");
+            CAMPO_MAIL.setCustomValidity("");
+        CAMPO_MAIL.reportValidity();
+            nuevo_email_usuario = campo;
         }
     }
 }
