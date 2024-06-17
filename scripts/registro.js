@@ -47,6 +47,8 @@ BOTON_REGISTRAR.addEventListener('click', function(event) {
     verificarCondicionesPassword(this.password)
     verificarCondicionesPassword(this.repass)
     verificarIgualdadEnClaves(this.password, this.repass)
+    validarMail(this.email);
+
 
 
 
@@ -58,7 +60,7 @@ BOTON_REGISTRAR.addEventListener('click', function(event) {
     localStorage.setItem(this.username, JSON.stringify(USUARIOS));
 });
 
-function verificarCondicionesNombre(nombre){
+function verificarCondicionesNombre(){
     let nameValue = CAMPO_NOMBRE.value;
         if(nameValue === ""){
             CAMPO_NOMBRE.setCustomValidity("El campo no puede estar vacio")
@@ -77,7 +79,7 @@ function verificarCondicionesNombre(nombre){
         }
 }
 
-function verificarCondicionesApellido(apellido){
+function verificarCondicionesApellido(){
     let lastnamenameValue = CAMPO_APELLIDO.value;
         if(lastnamenameValue === ""){
             CAMPO_APELLIDO.setCustomValidity("El campo no puede estar vacio")
@@ -96,7 +98,7 @@ function verificarCondicionesApellido(apellido){
         }
 }
 
-function verificarDisponibilidadDeNombreDeUsuario(username){
+function verificarDisponibilidadDeNombreDeUsuario(){
     let usernameValue = CAMPO_USERNAME.value;
     let usuariosGuardados = JSON.parse(localStorage.getItem('USUARIOS')) || [];
     let usuarioEncontrado = usuariosGuardados.find(usuario => usuario.username === username);
@@ -121,7 +123,7 @@ function verificarDisponibilidadDeNombreDeUsuario(username){
     }
 }
 
-function verificarCondicionesPassword(clave){
+function verificarCondicionesPassword(){
     let passwordValue = CAMPO_CLAVE.value;
     if(passwordValue === ""){
         CAMPO_CLAVE.setCustomValidity("El campo no puede estar vacio");
@@ -140,7 +142,7 @@ function verificarCondicionesPassword(clave){
     }
 }
 
-function verificarIgualdadEnClaves(clave, reclave){
+function verificarIgualdadEnClaves(){
     let passwordValue = CAMPO_CLAVE.value;
     let repasswordValue = CAMPO_REP_CLAVE.value;
     if(passwordValue === ""){
@@ -161,7 +163,28 @@ function verificarIgualdadEnClaves(clave, reclave){
     }
 }
 
+function validarMail(){
+    let campo = CAMPO_MAIL.value;
+    if(campo === ""){
+        CAMPO_MAIL.setCustomValidity("El campo no puede estar vacio.");
+        CAMPO_MAIL.reportValidity();
+        console.log("correo vacio")
+    }else if(!REGEX_MAIL.test(campo)){
+        CAMPO_MAIL.setCustomValidity("El campo no es un correo valido.");
+        CAMPO_MAIL.reportValidity();
+        console.log("correo invalido")
+    }else{
+        let usuariosGuardados = JSON.parse(localStorage.getItem('USUARIOS')) || [];
+        let usuarioEncontrado = usuariosGuardados.find(usuario => usuario.email === campo);
 
+        if(usuarioEncontrado){
+            console.log("Usuario encontrado:", usuarioEncontrado);
+            verify = true;
+        } else {
+            console.log("Correo no registrado");
+        }
+    }
+}
 
 
 
