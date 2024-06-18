@@ -1,4 +1,5 @@
 const USUARIOS = [];
+const FORMULARIO = document.getElementById('formularioRegistro');
 const CAMPO_NOMBRE = document.getElementById('name');
 const CAMPO_APELLIDO = document.getElementById('lastname');
 const CAMPO_USERNAME = document.getElementById('username');
@@ -51,7 +52,6 @@ class Usuario {
 } // fin de la class usuario
 
 BOTON_REGISTRAR.addEventListener('click', function(event) {
-    event.preventDefault();
     let usuariosGuardados = JSON.parse(localStorage.getItem('USUARIOS')) || [];
     verificarCondicionesNombre()
     verificarCondicionesApellido()

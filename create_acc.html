@@ -12,7 +12,7 @@
     <main class="mainregistro">
             <div class="registro">
                 <h3>Registrar usuario</h3>
-                <form action="./home.html" method="get" class="registroform">
+                <form action="./index.html" method="get" class="registroform" id="formularioRegistro">
                     <label for="name">
                         <input type="text" class="input" name="name" id="name" placeholder="Nombre" required>
                     </label>
@@ -36,8 +36,8 @@
                             <span class="metodopago">Metodo de pago</span>
                             <label for="creddit_card" class="pagos" id="tarjetadecredito">
                                 <input type="radio" id="cbox1" name="mediodepago" value="1"> <p>Tarjeta de Crédito</p> 
-                               <input type="number" id="card_number" class="no-spin-buttons" name="card_number" placeholder="Número de tarjeta" required>
-                              <input type="number" id="sec_code" class="no-spin-buttons" name="sec_code" placeholder="CVV" required >
+                               <input type="number" id="card_number" class="no-spin-buttons" name="card_number" placeholder="Número de tarjeta">
+                              <input type="number" id="sec_code" class="no-spin-buttons" name="sec_code" placeholder="CVV">
                             </label>
                             <label class="pagos">
                                 <input type="radio" id="cbox2" name="mediodepago" value="2">Pago Facil
