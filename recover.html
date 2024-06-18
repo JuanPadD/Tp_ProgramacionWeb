@@ -19,11 +19,11 @@
                 <p class="login_input">Para recuperar tu contraseña, ingresa el mail asociado a tu cuenta.</p>
                 <p class="login_input">Ingresa tu mail </p>
 
-                <form action="./index.html" method="get">
+                <form action="./index.html" method="get" id="recoverForm">
                     <label for="recoveremail">
                         <input type="email" class="input" id="recoveremail" placeholder="ejemplo@mail.com" required>
                     </label>
-                    <button class="login_btn"  type="submit">Enviar</button>
+                    <button class="login_btn"  type="submit" id="recoverSubmit">Enviar</button>
                 </form>
             </div>
             <div class="create_acc">
@@ -33,5 +33,6 @@
             ">
         </section>
     </main>
+    <script src="./scripts/recover.js"></script>
 </body>
 </html>
