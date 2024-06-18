@@ -40,12 +40,11 @@ let nuevo_email_usuario; // VARIABLE PARA GENERAR EL NUEVO USUARIO Y PASARLA POR
 //*********************************************METODOS**************************************************************** 
 
 class Usuario {
-    constructor (nombre , apellido , username, password, repass, email, metododepago){
+    constructor (nombre , apellido , username, password, email, metododepago){
         this.nombre = nombre;
         this.apellido = apellido;
         this.username = username;
         this.password = password;
-        this.repass = repass;
         this.email = email;
         this.metododepago = null;
     }
