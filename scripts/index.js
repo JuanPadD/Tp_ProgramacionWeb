@@ -4,6 +4,7 @@ const CAMPO_CLAVE = document.getElementById('loggin_password');
 const REGEX_MAIL = /^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/;
 let verify = false;
 let usuarioIngresante = {};
+const FORMULARIO_INGRESO = document.getElementById('logginform');
 
 LOGGIN_BUTTON.addEventListener('click', function(event){
     event.preventDefault();
@@ -14,7 +15,7 @@ LOGGIN_BUTTON.addEventListener('click', function(event){
     validarCredenciales(campo_mail_valor, campo_clave_valor);
     
     if (verify === true){
-        event.submit;
+        FORMULARIO_INGRESO.submit();
         console.log("Form enviado.")
     }
 });
