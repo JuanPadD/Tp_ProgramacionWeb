@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/flickity.min.css">
     <link rel="stylesheet" href="./css/styles.css">
     <title></title>
 </head>
@@ -28,9 +29,9 @@
                         
                     </video>
                 </div>
-                <form id="linkParaMirar-serie" class="form_button" action="https://www.primevideo.com/detail/0KAW4T6OOSAPQJVCFDCOXNLGJU/ref=atv_dp_season_select_s1" method="get" target="_blank">
-                    <button class="buttoncomenzar" type="submit" >Comenzar</button>
-                </form>
+                <div class="form_button">
+                    <button class="buttoncomenzar" type="submit" onclick="visitPage()">Comenzar</button>
+                </div>
             </article>
 
             <article class="description">
@@ -75,31 +76,13 @@
         </section>
         <section class="recommendations ">
             <h2>Similares</h2>
-            <div class="img_container">
-                <div class="img_item">
-                    <a href="./series/worldbeyond.html">
-                        <img src="./img/seriefantasia1.jpg" alt="Walking Dead - World Beyond">
-                    </a>
-                </div>
-                <div class="img_item">
-                    <a href="./series/swat.html">
-                        <img src="./img/serieaccion2.jpg" alt="S.W.A.T">
-                    </a>
-                </div>
-                <div class="img_item">
-                    <a href="./series/fallout.html">
-                        <img src="./img/serieaccion1.jpg" alt="Fallout">
-                    </a>
-                </div>
-                <div class="img_item">
-                    <a href="./series/wd-theonewholives.html">
-                        <img src="./img/serieterror1.jpg" alt="WD - The one who lives">
-                    </a>
-                </div>
+            <div id="carousel-serie" class="main-carousel">
+                
             </div>
-            
         </section>
     </main>
+    <script src="./scripts/flickity.pkgd.min.js"></script>
+    <script src="./scripts/data.js"></script>
     <script src="./scripts/clase_serie.js"></script>
     <script src="./scripts/serie.js"></script>
 </body>

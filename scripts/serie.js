@@ -15,6 +15,9 @@ source.type = "video/mp4"
 const video = document.getElementById("video-serie")
 video.appendChild(source)
 
+function visitPage(){
+    window.open(`${serie.linkParaMirar}`, '_blank');
+}
 
 const nodo_texto_titulo = document.createTextNode(serie.nombre)
 const nodo_h3_titulo = document.getElementById("titulo-serie")
@@ -56,3 +59,44 @@ const nodo_texto_sinopsis = document.createTextNode(serie.sinopsis)
 const nodo_p_sinopsis = document.getElementById("sinopsis-serie")
 nodo_p_sinopsis.appendChild(nodo_texto_sinopsis)
 
+
+const JSON_SERIES = localStorage.getItem(LOCALSTORAGE_SERIES)
+const SERIES_VISTA_SERIE = JSON.parse(JSON_SERIES)
+
+function agregarCarouselSeries(){
+    let nodo_contenedor = document.getElementById("carousel-serie")
+
+
+        
+            for(let i in SERIES_VISTA_SERIE){
+                let nombre_pelicula__actual = SERIES_VISTA_SERIE[i]['nombre'];
+                if(document.title != nombre_pelicula__actual){
+
+                let nodo_div = document.createElement("div");
+                nodo_div.classList.add('carousel-cell')
+                let nodo_a = document.createElement("a")
+                nodo_a.href = `detalle-serie.html?indice=${i}`
+                let nodo_img = document.createElement("img");
+                nodo_img.classList.add('carousel-cell-img')
+                nodo_img.src = `./img/${SERIES_VISTA_SERIE[i]['nombre']}.jpg`
+                nodo_img.alt = `${SERIES_VISTA_SERIE[i]['nombre']}`
+                nodo_a.appendChild(nodo_img)
+                nodo_div.appendChild(nodo_a)
+                nodo_contenedor.appendChild(nodo_div)
+        
+    
+        }
+        }
+        
+    
+
+}
+
+agregarCarouselSeries()
+
+const carousel = document.querySelector('.main-carousel');
+
+const flkty = new Flickity( carousel, {
+  cellAlign: 'left',
+  contain: true
+});

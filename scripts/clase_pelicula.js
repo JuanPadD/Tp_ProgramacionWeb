@@ -8,6 +8,10 @@ class Pelicula{
         return this.pelicula['nombre']
     }
 
+    get linkParaMirar() {
+        return this.pelicula['linkParaMirar']
+    }
+
     get generos() {
         return this.pelicula['generos']
     }

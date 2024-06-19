@@ -8,6 +8,10 @@ class Serie{
         return this.serie['nombre']
     }
 
+    get linkParaMirar() {
+        return this.serie['linkParaMirar']
+    }
+
     get temporadas() {
         return this.serie['temporadas']
     }

@@ -627,7 +627,24 @@ h3{
         grid-auto-rows: auto;
         gap: 15px;
         margin: 2em 4em 3em 4em;
-      }  
+      }
+      
+      .main-carousel{
+        width: 75%;
+        margin: auto;
+      }
+      
+      .carousel-cell {
+        text-align: center;
+        width: 50%;
+        height: 20em;
+        margin-right: 10px;
+        border-radius: 5px;
+      }
+    
+    .carousel-cell-img{
+        width: 100%;
+    }
 }
 
 .savechanges_buttons_container{

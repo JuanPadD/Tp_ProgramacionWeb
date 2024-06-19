@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css//flickity.min.css">
     <link rel="stylesheet" href="./css/styles.css">
     <title></title>
 </head>
@@ -28,9 +29,9 @@
                     
                     </video>
                 </div>
-                <form class="form_button" action="https://www.primevideo.com/detail/0HVQI9T0FD1MO69Q1CQE9NSSZX/ref=atv_dl_rdr" method="get" target="_blank">
-                    <button class="buttoncomenzar" type="submit" >Comenzar</button>
-                </form>
+                <div class="form_button">
+                    <button class="buttoncomenzar" type="submit" onclick="visitPage()">Comenzar</button>
+                </div>
             </article>
 
             <article class="description">
@@ -58,26 +59,13 @@
         </section>
         <section class="recommendations ">
             <h2>Similares</h2>
-            <div class="img_container">
-                <div class="img_item">
-                    <a href="./pelis/venom.html">
-                        <img src="./img/peliculafantasia2.jpg" alt=""></a> 
-                </div>
-                <div class="img_item">
-                    <a href="./pelis/Unaesposadementira.html">
-                        <img src="../img/peliculacomedia1.jpg" alt=""></a> 
-                </div>
-                <div class="img_item">
-                    <a href="./pelis/ted.html">
-                        <img src="../img/peliculacomedia2.jpg" alt=""></a> 
-                </div>
-                <div class="img_item">
-                    <a href="./pelis/oneday.html">
-                        <img src="../img/pelicularomance1.jpg" alt=""></a> 
-                </div>
+            <div id="carousel-pelicula" class="main-carousel">
+                
             </div>
         </section>
     </main>
+    <script src="./scripts/flickity.pkgd.min.js"></script>
+    <script src="./scripts/data.js"></script>
     <script src="./scripts/clase_pelicula.js"></script>
     <script src="./scripts/pelicula.js"></script>
 </body>

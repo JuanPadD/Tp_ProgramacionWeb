@@ -3,7 +3,7 @@ const url_vista = document.location.href;
 const url = new URL(url_vista)
 const indice_de_la_pelicula = url.searchParams.get(QUERY_PARAMS_NOMBRE)
 
-const PELICULAS = JSON.parse(localStorage.getItem('peliculas'))
+let PELICULAS = JSON.parse(localStorage.getItem('peliculas'))
 
 const pelicula = new Pelicula(PELICULAS[indice_de_la_pelicula])
 
@@ -14,6 +14,10 @@ source.src = `./video/${pelicula.nombre}.mp4`
 source.type = "video/mp4"
 const video = document.getElementById("video-pelicula")
 video.appendChild(source)
+
+function visitPage(){
+    window.open(`${pelicula.linkParaMirar}`, '_blank');
+}
 
 
 const nodo_texto_titulo = document.createTextNode(pelicula.nombre)
@@ -45,3 +49,43 @@ const nodo_texto_sinopsis = document.createTextNode(pelicula.sinopsis)
 const nodo_p_sinopsis = document.getElementById("sinopsis-pelicula")
 nodo_p_sinopsis.appendChild(nodo_texto_sinopsis)
 
+const JSON_PELICULAS = localStorage.getItem(LOCALSTORAGE_PELICULAS)
+const PELICULAS_VISTA_PELICULA = JSON.parse(JSON_PELICULAS)
+
+function agregarCarouselPeliculas(){
+    let nodo_contenedor = document.getElementById("carousel-pelicula")
+
+
+        
+            for(let i in PELICULAS_VISTA_PELICULA){
+                let nombre_pelicula__actual = PELICULAS_VISTA_PELICULA[i]['nombre'];
+                if(document.title != nombre_pelicula__actual){
+
+                let nodo_div = document.createElement("div");
+                nodo_div.classList.add('carousel-cell')
+                let nodo_a = document.createElement("a")
+                nodo_a.href = `detalle-pelicula.html?indice=${i}`
+                let nodo_img = document.createElement("img");
+                nodo_img.classList.add('carousel-cell-img')
+                nodo_img.src = `./img/${PELICULAS_VISTA_PELICULA[i]['nombre']}.jpg`
+                nodo_img.alt = `${PELICULAS_VISTA_PELICULA[i]['nombre']}`
+                nodo_a.appendChild(nodo_img)
+                nodo_div.appendChild(nodo_a)
+                nodo_contenedor.appendChild(nodo_div)
+        
+    
+        }
+        }
+        
+    
+
+}
+
+agregarCarouselPeliculas()
+
+const carousel = document.querySelector('.main-carousel');
+
+const flkty = new Flickity( carousel, {
+  cellAlign: 'left',
+  contain: true
+});
