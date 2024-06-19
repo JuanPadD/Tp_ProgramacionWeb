@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Mi Flimpop</title>
+    <link rel="icon" type="image" href="./img/favicon.ico">
+</head>
+
+<body class="profile">
+    <nav class="navbar">
+        <ul class="menu">
+            <li class="menu_item"><a href="./home.html"><img src="./img/logo.png" alt=""></a></li>
+            <li class="menu_item"><a class="menu_link" href="./home.html">HOME</a></li>
+            <li class="menu_item"><a class="menu_link" href="./vista-serie.html">SERIES</a></li>
+            <li class="menu_item"><a class="menu_link" href="./vista-pelicula.html">PELÍCULAS</a></li>
+            <li class="menu_item"><a class="menu_link" href="./vista-perfil.html">PERFIL</a></li>
+        </ul>
+    </nav>
+
+    <section class="profile_container">
+
+        <div class="user_pic">
+            <img class="profile_pic" src="./img/perfilimage.png" alt="">
+            <h3>Nombre de usuario</h3>
+        </div>
+
+        <form class="profile_info"action="">
+
+            <div class="user_info">
+                <p class="info_text">Email</p>
+                <p>Ejemploemail@email.com</p>
+                <label class="info_text" for="">Nueva contraseña
+                    <input type="password" placeholder="Ingrese nueva contraseña" class="changepass" required>
+                </label>
+                <label class="info_text" for="">Repetir contraseña
+                    <input type="password" placeholder="Ingrese nueva contraseña" class="changepass" required>
+                </label>
+            </div>
+
+            <div class="payment_info">
+                    <p class="info_text">Método de pago</p>
+
+                    <label class="input" for="">Tarjeta de crédito<input type="radio" name="paymethod"></label>
+                    <input type="number" placeholder="xxxxxxxxx">
+                    <input type="number" placeholder="xxxxxxx">
+                    <label for="">Cupón de pago<input type="radio" name="paymethod"></label>
+                    <label for="">Pago fácil<input type="radio" name="paymethod" id=""></label>                
+                    <label for="">RapiPago<input type="radio" name="paymethod" id=""></label>   
+                    <label for="">Transferencia bancaria<input type="radio" name="paymethod"></label>
+                    <p>CBU : 0000000000000000</p>
+            </div>
+            <div class="savechanges_buttons_container">
+                <button type="submit" class="savechanges">Guardar cambios</button>
+                <button type="submit" class="cancelsuscription"><a href="./index.html">Cancelar suscripción</a></button>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>
