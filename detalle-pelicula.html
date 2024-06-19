@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title></title>
+</head>
+
+<body style="color: white;">
+    <header class="home_header">
+        <nav class="navbar">
+            <ul class="menu">
+                <li class="menu_item"><a href="./home.html"><img src="./img/logo.png" alt=""></a></li>
+                <li class="menu_item"><a class="menu_link" href="./home.html">HOME</a></li>
+                <li class="menu_item"><a class="menu_link" href="./vista-serie.html">SERIES</a></li>
+                <li class="menu_item"><a class="menu_link" href="./vista-pelicula.html">PELÍCULAS</a></li>
+                <li class="menu_item"><a class="menu_link" href="./vista-perfil.html">PERFIL</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="movie_view">
+            <article>
+                <div class="movie_container" >
+                    <video controls autoplay id="video-pelicula">
+                    
+                    </video>
+                </div>
+                <form class="form_button" action="https://www.primevideo.com/detail/0HVQI9T0FD1MO69Q1CQE9NSSZX/ref=atv_dl_rdr" method="get" target="_blank">
+                    <button class="buttoncomenzar" type="submit" >Comenzar</button>
+                </form>
+            </article>
+
+            <article class="description">
+                <div>
+                    <div class="detail_movie">
+                        <h3>Título:</h3>
+                            <p id="titulo-pelicula"> </p>
+                    </div>
+                    <div class="detail_movie">
+                        <h3>Género:</h3>
+                            <p id="generos-pelicula"></p>
+                    </div>
+                    <div class="detail_movie">
+                        <h3>Actores:</h3>
+                            <p id="actores-pelicula"> </p>
+                    </div>
+                </div>
+
+                <div class="resume">
+                    <p id="sinopsis-pelicula"></p>
+                </div>
+
+            </article>
+
+        </section>
+        <section class="recommendations ">
+            <h2>Similares</h2>
+            <div class="img_container">
+                <div class="img_item">
+                    <a href="./pelis/venom.html">
+                        <img src="./img/peliculafantasia2.jpg" alt=""></a> 
+                </div>
+                <div class="img_item">
+                    <a href="./pelis/Unaesposadementira.html">
+                        <img src="../img/peliculacomedia1.jpg" alt=""></a> 
+                </div>
+                <div class="img_item">
+                    <a href="./pelis/ted.html">
+                        <img src="../img/peliculacomedia2.jpg" alt=""></a> 
+                </div>
+                <div class="img_item">
+                    <a href="./pelis/oneday.html">
+                        <img src="../img/pelicularomance1.jpg" alt=""></a> 
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./scripts/clase_pelicula.js"></script>
+    <script src="./scripts/pelicula.js"></script>
+</body>
+
+</html>
