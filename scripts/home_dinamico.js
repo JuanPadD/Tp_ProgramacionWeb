@@ -1,18 +1,20 @@
 const JSON_SERIES = localStorage.getItem(LOCALSTORAGE_SERIES)
-const SERIES = JSON.parse(JSON_SERIES)
+const SERIES_NUEVO = JSON.parse(JSON_SERIES)
 
 function agregarSeries(){
     let nodo_contenedor = document.getElementById("dinamico")
 
-        for(let i in SERIES){
+        for(let i in SERIES_NUEVO){
 
             let nodo_div = document.createElement("div");
             nodo_div.classList.add('img_item')
+            nodo_div.id = `${SERIES_NUEVO[i]['nombre']}`
+            nodo_div.classList.add('elemento')
             let nodo_a = document.createElement("a")
             nodo_a.href = `detalle-serie.html?indice=${i}`
             let nodo_img = document.createElement("img");
-            nodo_img.src = `./img/${SERIES[i]['nombre']}.jpg`
-            nodo_img.alt = `${SERIES[i]['nombre']}`
+            nodo_img.src = `./img/${SERIES_NUEVO[i]['nombre']}.jpg`
+            nodo_img.alt = `${SERIES_NUEVO[i]['nombre']}`
             nodo_a.appendChild(nodo_img)
             nodo_div.appendChild(nodo_a)
             nodo_contenedor.appendChild(nodo_div)
@@ -35,6 +37,8 @@ function agregarPeliculas(){
 
             let nodo_div = document.createElement("div");
             nodo_div.classList.add('img_item')
+            nodo_div.id = `${PELICULAS_NUEVO[i]['nombre']}`
+            nodo_div.classList.add('elemento')
             let nodo_a = document.createElement("a")
             nodo_a.href = `detalle-pelicula.html?indice=${i}`
             let nodo_img = document.createElement("img");
@@ -55,4 +59,25 @@ if(document.title != "Flimpop Peliculas"){
 if(document.title != "Flimpop Series"){
 
     agregarPeliculas()
+}
+
+const buscador  = document.getElementById("search-input")
+buscador.addEventListener('input', filterList)
+
+
+function filterList(){
+    const buscador = document.getElementById("search-input")
+    const filtro = buscador.value.toLowerCase()
+    const listaImagenes = document.querySelectorAll(".elemento")
+
+    listaImagenes.forEach((item) =>{
+        let texto = item.id
+        if(texto.toLowerCase().includes(filtro.toLowerCase())){
+            item.style.display = '';
+        }
+        else{
+            item.style.display = 'none';
+        }
+    })
+
 }
