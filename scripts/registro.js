@@ -53,6 +53,32 @@ class Usuario {
     }
 } // fin de la class usuario
 
+document.addEventListener('DOMContentLoaded', () => {
+    let usuariosGuardados = JSON.parse(localStorage.getItem('USUARIOS')) || [];
+
+    if (usuariosGuardados.length > 0) {
+        let primerUsuario = usuariosGuardados[0];
+        const nombreUsuarioElemento = document.getElementById('nombre_usuario');
+        const emailUsuarioElemento = document.getElementById('email_usuario');
+
+        if (nombreUsuarioElemento) {
+            nombreUsuarioElemento.textContent = primerUsuario.nombre;
+        } else {
+            console.error('Elemento con id "nombre_usuario" no encontrado.');
+        }
+
+        if (emailUsuarioElemento) {
+            emailUsuarioElemento.textContent = primerUsuario.email;
+        } else {
+            console.error('Elemento con id "email_usuario" no encontrado.');
+        }
+    } else {
+        console.error('No hay usuarios guardados en localStorage.');
+    }
+});
+
+
+
 if(BOTON_REGISTRAR){
     BOTON_REGISTRAR.addEventListener('click', function(event) {
         let usuariosGuardados = JSON.parse(localStorage.getItem('USUARIOS')) || [];
