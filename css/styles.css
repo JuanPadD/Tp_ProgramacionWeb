@@ -894,6 +894,21 @@ h3{
         }
 }
 
+.flickity-prev-next-button {
+    top: 13%;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.flickity-prev-next-button.next {
+    right: -45px;
+}
+
+.flickity-prev-next-button.previous {
+    left: -45px;
+}
 
 
 
