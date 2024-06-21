@@ -1,3 +1,5 @@
+console.log('Script cargado correctamente');
+
 const USUARIOS = [];
 const FORMULARIO = document.getElementById('formularioRegistro');
 const CAMPO_NOMBRE = document.getElementById('name');
@@ -15,6 +17,7 @@ const INPUT_PAGOFACIL = document.getElementById('cbox2');
 const INPUT_RAPIPAGO = document.getElementById('cbox3');
 const INPUT_CBU = document.getElementById('cbox4');
 const BOTON_REGISTRAR = document.getElementById('registrarbutton');
+const BOTON_GUARDAR = document.getElementById('guardarbutton');
 const RADIOBUTTON_TARJETA = document.getElementById('cbox1');
 const RADIOBUTTON_PAGOFACIL = document.getElementById('cbox2');
 const RADIOBUTTON_RAPIPAGO = document.getElementById('cbox3');
@@ -40,268 +43,284 @@ let nuevo_email_usuario; // VARIABLE PARA GENERAR EL NUEVO USUARIO Y PASARLA POR
 //*********************************************METODOS**************************************************************** 
 
 class Usuario {
-    constructor (nombre , apellido , username, password, email, metododepago){
+    constructor (nombre, apellido, username, password, email, metododepago){
         this.nombre = nombre;
         this.apellido = apellido;
         this.username = username;
         this.password = password;
         this.email = email;
-        this.metododepago = null;
+        this.metododepago = metododepago;
     }
-} // fin de la class usuario
+}
 
+<<<<<<< HEAD
 BOTON_REGISTRAR.addEventListener('click', function(event) {
-    let usuariosGuardados = JSON.parse(localStorage.getItem('USUARIOS')) || [];
-    verificarCondicionesNombre()
-    verificarCondicionesApellido()
-    verificarDisponibilidadDeNombreDeUsuario()
-    verificarCondicionesPassword()
-    verificarCondicionesPassword()
-    verificarIgualdadEnClaves()
+    event.preventDefault();
+    verify = true;
+
+    verificarCondicionesNombre();
+    verificarCondicionesApellido();
+    verificarDisponibilidadDeNombreDeUsuario();
+    verificarCondicionesPassword();
+    verificarIgualdadEnClaves();
     validarMail();
 
-    if (verify_tarjeta === true){
-        validarNroDeTarjeta()
-        validarNroCvv()
+    if (verify_tarjeta) {
+        validarNroDeTarjeta();
+        validarNroCvv();
     }
 
-    if(verify){
+    if (verify) {
         SetMetodoDePago();
         let nuevoUsuario = new Usuario(nuevo_nombre_usuario, nuevo_apellido_usuario, nuevo_username_usuario, nuevo_password_usuario, nuevo_email_usuario);
         USUARIOS.push(nuevoUsuario);
         localStorage.setItem('USUARIOS', JSON.stringify(USUARIOS));
         console.log("Usuario registrado correctamente");
-        event.submit;
+        FORMULARIO.submit();
+    } else {
+        console.log("Error en el registro. Por favor, verificar los campos.");
     }
+=======
+document.addEventListener('DOMContentLoaded', () => {
+    let usuariosGuardados = JSON.parse(localStorage.getItem('USUARIOS')) || [];
 
-    USUARIOS.push(this);
-    localStorage.setItem(this.username, JSON.stringify(USUARIOS));
+    if (usuariosGuardados.length > 0) {
+        let primerUsuario = usuariosGuardados[0];
+        const nombreUsuarioElemento = document.getElementById('nombre_usuario');
+        const emailUsuarioElemento = document.getElementById('email_usuario');
+
+        if (nombreUsuarioElemento) {
+            nombreUsuarioElemento.textContent = primerUsuario.nombre;
+        } else {
+            console.error('Elemento con id "nombre_usuario" no encontrado.');
+        }
+
+        if (emailUsuarioElemento) {
+            emailUsuarioElemento.textContent = primerUsuario.email;
+        } else {
+            console.error('Elemento con id "email_usuario" no encontrado.');
+        }
+    } else {
+        console.error('No hay usuarios guardados en localStorage.');
+    }
+>>>>>>> 2b5e162682d83e9543721c953ece1ae03cfd00cb
 });
 
+
+
+if(BOTON_REGISTRAR){
+    BOTON_REGISTRAR.addEventListener('click', function(event) {
+        let usuariosGuardados = JSON.parse(localStorage.getItem('USUARIOS')) || [];
+        verificarCondicionesNombre()
+        verificarCondicionesApellido()
+        verificarDisponibilidadDeNombreDeUsuario()
+        verificarCondicionesPassword()
+        verificarCondicionesPassword()
+        verificarIgualdadEnClaves()
+        validarMail();
+    
+        if (verify_tarjeta === true){
+            validarNroDeTarjeta()
+            validarNroCvv()
+        }
+    
+        if(verify){
+            SetMetodoDePago();
+            let nuevoUsuario = new Usuario(nuevo_nombre_usuario, nuevo_apellido_usuario, nuevo_username_usuario, nuevo_password_usuario, nuevo_email_usuario);
+            USUARIOS.push(nuevoUsuario);
+            localStorage.setItem('USUARIOS', JSON.stringify(USUARIOS));
+            console.log("Usuario registrado correctamente");
+            event.submit;
+        }
+    
+        USUARIOS.push(this);
+        localStorage.setItem(this.username, JSON.stringify(USUARIOS));
+    });
+}
+
+if(BOTON_GUARDAR){
+    BOTON_GUARDAR.addEventListener('click', function(event) {
+        let usuariosGuardados = JSON.parse(localStorage.getItem('USUARIOS')) || [];
+        verificarCondicionesPassword()
+        verificarCondicionesPassword()
+        verificarIgualdadEnClaves()
+        validarMail();
+    
+        if (verify_tarjeta === true){
+            validarNroDeTarjeta()
+            validarNroCvv()
+        }
+    
+        if(verify){
+            SetMetodoDePago();
+            let nuevoUsuario = new Usuario(nuevo_nombre_usuario, nuevo_apellido_usuario, nuevo_username_usuario, nuevo_password_usuario, nuevo_email_usuario);
+            USUARIOS.push(nuevoUsuario);
+            localStorage.setItem('USUARIOS', JSON.stringify(USUARIOS));
+            console.log("Usuario registrado correctamente");
+            event.submit;
+        }
+    
+        USUARIOS.push(this);
+        localStorage.setItem(this.username, JSON.stringify(USUARIOS));
+    });
+}
+
 RADIOBUTTON_TARJETA.addEventListener('click', function(event){
-INPUT_TARJETA_NUMERO.classList.remove("ocultar");
-INPUT_TARJETA_CVV.classList.remove("ocultar");
-verify_tarjeta = true;
+    INPUT_TARJETA_NUMERO.classList.remove("ocultar");
+    INPUT_TARJETA_CVV.classList.remove("ocultar");
+    verify_tarjeta = true;
 });
 
 RADIOBUTTON_PAGOFACIL.addEventListener('click', function(event){
-INPUT_TARJETA_NUMERO.classList.add("ocultar");
-INPUT_TARJETA_CVV.classList.add("ocultar");
-verify_pagofacil = true;
+    INPUT_TARJETA_NUMERO.classList.add("ocultar");
+    INPUT_TARJETA_CVV.classList.add("ocultar");
+    verify_pagofacil = true;
 });
 
 RADIOBUTTON_RAPIPAGO.addEventListener('click', function(event){
-INPUT_TARJETA_NUMERO.classList.add("ocultar");
-INPUT_TARJETA_CVV.classList.add("ocultar");
-verify_rapipago = true;
+    INPUT_TARJETA_NUMERO.classList.add("ocultar");
+    INPUT_TARJETA_CVV.classList.add("ocultar");
+    verify_rapipago = true;
 });
 
 RADIOBUTTON_CBU.addEventListener('click', function(event){
-INPUT_TARJETA_NUMERO.classList.add("ocultar");
-INPUT_TARJETA_CVV.classList.add("ocultar");
-verify_cbu = true;
+    INPUT_TARJETA_NUMERO.classList.add("ocultar");
+    INPUT_TARJETA_CVV.classList.add("ocultar");
+    verify_cbu = true;
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// **************************************FUNCIONES*********************************************************************************************
 
 function verificarCondicionesNombre(){
     let nameValue = CAMPO_NOMBRE.value;
-        if(nameValue === ""){
-            CAMPO_NOMBRE.setCustomValidity("El campo no puede estar vacio")
-            CAMPO_NOMBRE.reportValidity();
-            verify = false;
-        }else if(!REGEX_SOLO_LETRAS.test(nameValue)){
-            CAMPO_NOMBRE.setCustomValidity("El campo solo debe contener letras")
-            CAMPO_NOMBRE.reportValidity();
-            verify = false;
-        }else{
-            CAMPO_NOMBRE.setCustomValidity("")
-            CAMPO_NOMBRE.reportValidity();
-            nuevo_nombre_usuario = nameValue;
-            verify = true;
-            console.log("Campo nombre completado correctamente")
-        }
+    if (nameValue === "" || !REGEX_SOLO_LETRAS.test(nameValue)) {
+        CAMPO_NOMBRE.setCustomValidity("El campo debe contener solo letras y no puede estar vacío");
+        CAMPO_NOMBRE.reportValidity();
+        verify = false;
+    } else {
+        CAMPO_NOMBRE.setCustomValidity("");
+        nuevo_nombre_usuario = nameValue;
+        console.log("Campo nombre completado correctamente");
+    }
 }
 
 function verificarCondicionesApellido(){
-    let lastnamenameValue = CAMPO_APELLIDO.value;
-        if(lastnamenameValue === ""){
-            CAMPO_APELLIDO.setCustomValidity("El campo no puede estar vacio")
-            CAMPO_APELLIDO.reportValidity();
-            verify = false;
-        }else if(!REGEX_SOLO_LETRAS.test(lastnamenameValue)){
-            CAMPO_APELLIDO.setCustomValidity("El campo solo debe contener letras")
-            CAMPO_APELLIDO.reportValidity();
-            verify = false;
-        }else{
-            CAMPO_APELLIDO.setCustomValidity("")
-            CAMPO_APELLIDO.reportValidity();
-            nuevo_apellido_usuario = lastnamenameValue;
-            verify = true;
-            console.log("Campo apellido completado correctamente")
-        }
+    let lastnameValue = CAMPO_APELLIDO.value;
+    if (lastnameValue === "" || !REGEX_SOLO_LETRAS.test(lastnameValue)) {
+        CAMPO_APELLIDO.setCustomValidity("El campo debe contener solo letras y no puede estar vacío");
+        CAMPO_APELLIDO.reportValidity();
+        verify = false;
+    } else {
+        CAMPO_APELLIDO.setCustomValidity("");
+        nuevo_apellido_usuario = lastnameValue;
+        console.log("Campo apellido completado correctamente");
+    }
 }
 
 function verificarDisponibilidadDeNombreDeUsuario(){
     let usernameValue = CAMPO_USERNAME.value;
     let usuariosGuardados = JSON.parse(localStorage.getItem('USUARIOS')) || [];
-    let usuarioEncontrado = usuariosGuardados.find(usuario => usuario.username === username);
-    if(usernameValue === ""){
-        CAMPO_USERNAME.setCustomValidity("El campo no puede estar vacio");
+    let usuarioEncontrado = usuariosGuardados.find(usuario => usuario.username === usernameValue);
+    if (usernameValue === "" || !REGEX_ALFANUMERICO.test(usernameValue) || usuarioEncontrado) {
+        CAMPO_USERNAME.setCustomValidity("El campo debe contener solo letras y números, no puede estar vacío, o el nombre de usuario ya está en uso");
         CAMPO_USERNAME.reportValidity();
         verify = false;
-    }else if(!REGEX_ALFANUMERICO.test(usernameValue)){
-        CAMPO_USERNAME.setCustomValidity("El campo solo debe contener letras y numeros");
-        CAMPO_USERNAME.reportValidity();
-        verify = false;
-    }else if(usuarioEncontrado){
-        CAMPO_USERNAME.setCustomValidity("El nombre de usuario ya esta en uso, intente con otro"); // VALIDAR UNA VEZ CREADO UN USUARIO, QUE ESTA FUNCION SE CUMPLA.
-        CAMPO_USERNAME.reportValidity();
-        verify = false
-    }else{
+    } else {
         CAMPO_USERNAME.setCustomValidity("");
-        CAMPO_USERNAME.reportValidity();
-        nuevo_nombre_usuario = usernameValue;
-        verify = false
-        console.log("Campo usuario completado correctamente")
+        nuevo_username_usuario = usernameValue;
+        console.log("Campo usuario completado correctamente");
     }
 }
 
 function verificarCondicionesPassword(){
     let passwordValue = CAMPO_CLAVE.value;
-    if(passwordValue === ""){
-        CAMPO_CLAVE.setCustomValidity("El campo no puede estar vacio");
+    if (passwordValue === "" || !REGEX_CLAVE.test(passwordValue)) {
+        CAMPO_CLAVE.setCustomValidity("La contraseña debe contener al menos 2 letras, 2 números, 2 caracteres especiales y tener 8 dígitos");
         CAMPO_CLAVE.reportValidity();
         verify = false;
-    }else if(!REGEX_CLAVE.test(passwordValue)){
-        CAMPO_CLAVE.setCustomValidity("El campo debe contener al menos 2 Letras, 2 números y 2 caracteres especiales. Y debe ser de 8 digitos.");
-        CAMPO_CLAVE.reportValidity();
-        verify = false;
-    }else{
+    } else {
         CAMPO_CLAVE.setCustomValidity("");
-        CAMPO_CLAVE.reportValidity();
         nuevo_password_usuario = passwordValue;
-        verify = true; 
-        console.log("clave generada correctamente.")
+        console.log("Clave generada correctamente");
     }
 }
 
 function verificarIgualdadEnClaves(){
     let passwordValue = CAMPO_CLAVE.value;
     let repasswordValue = CAMPO_REP_CLAVE.value;
-    if(passwordValue === ""){
-        CAMPO_CLAVE.setCustomValidity("El campo no puede estar vacio.")
-        CAMPO_CLAVE.reportValidity()
-        verify = false;
-    } else if(repasswordValue === ""){
-        CAMPO_REP_CLAVE.setCustomValidity("El campo no puede estar vacio.")
-        CAMPO_REP_CLAVE.reportValidity()
-        verify = false;
-    } else if(passwordValue !== repasswordValue){
-        CAMPO_REP_CLAVE.setCustomValidity("Las contraseñas no coinciden.")
+    if (passwordValue === "" || repasswordValue === "" || passwordValue !== repasswordValue) {
+        CAMPO_REP_CLAVE.setCustomValidity("Las contraseñas no coinciden o el campo está vacío");
         CAMPO_REP_CLAVE.reportValidity();
         verify = false;
-    }else if(passwordValue === repasswordValue){
-        console.log("clave y reclave coinciden.")
-        CAMPO_REP_CLAVE.setCustomValidity("")
-        CAMPO_REP_CLAVE.reportValidity();
-        verify = true;
+    } else {
+        CAMPO_REP_CLAVE.setCustomValidity("");
+        console.log("Claves coinciden");
     }
 }
 
 function validarMail(){
-    let campo = CAMPO_MAIL.value;
-    if(campo === ""){
-        CAMPO_MAIL.setCustomValidity("El campo no puede estar vacio.");
+    let mailValue = CAMPO_MAIL.value;
+    if (mailValue === "" || !REGEX_MAIL.test(mailValue)) {
+        CAMPO_MAIL.setCustomValidity("El campo no puede estar vacío y debe ser un correo válido");
         CAMPO_MAIL.reportValidity();
-        console.log("correo vacio")
-    }else if(!REGEX_MAIL.test(campo)){
-        CAMPO_MAIL.setCustomValidity("El campo no es un correo valido.");
-        CAMPO_MAIL.reportValidity();
-        console.log("correo invalido")
-    }else{
+        verify = false;
+    } else {
         let usuariosGuardados = JSON.parse(localStorage.getItem('USUARIOS')) || [];
-        let usuarioEncontrado = usuariosGuardados.find(usuario => usuario.email === campo);
-        if(usuarioEncontrado){
-            console.log("Usuario encontrado:", usuarioEncontrado);
+        let usuarioEncontrado = usuariosGuardados.find(usuario => usuario.email === mailValue);
+        if (usuarioEncontrado) {
+            CAMPO_MAIL.setCustomValidity("El correo ya está en uso");
+            CAMPO_MAIL.reportValidity();
             verify = false;
         } else {
-            console.log("Correo nuevo registrado");
             CAMPO_MAIL.setCustomValidity("");
-        CAMPO_MAIL.reportValidity();
-            nuevo_email_usuario = campo;
+            nuevo_email_usuario = mailValue;
+            console.log("Correo nuevo registrado");
         }
     }
 }
 
 function validarNroDeTarjeta(){
-let nroTarjetaValue = INPUT_TARJETA_NUMERO.value
-if (!REGEX_TARJETA.test(nroTarjetaValue)){
-    INPUT_TARJETA_NUMERO.setCustomValidity("Tarjeta incorrecta, debe tener entre 16 y 19 digitos para ser valida");
-    INPUT_TARJETA_NUMERO.reportValidity();
-    verify_tarjeta = false;
-}else{
-    INPUT_TARJETA_NUMERO.setCustomValidity("");
-    INPUT_TARJETA_NUMERO.reportValidity();
-    let nros = Array.from(nroTarjetaValue).map(Number);
-    let sumaDeNros = 0;
-    const ultimoNro = nros[nros.length - 1];
-
-    nros.slice(0, -1).forEach(digito => {
-        sumaDeNros += digito;
-    });
-
-        if (sumaDeNros % 2 !== 0){
-            return ultimoNro % 2 === 0;
-            console.log("La suma es impar, el último dígito debe ser par")
+    let nroTarjetaValue = INPUT_TARJETA_NUMERO.value;
+    if (!REGEX_TARJETA.test(nroTarjetaValue)) {
+        INPUT_TARJETA_NUMERO.setCustomValidity("Tarjeta incorrecta, debe tener entre 16 y 19 dígitos");
+        INPUT_TARJETA_NUMERO.reportValidity();
+        verify_tarjeta = false;
+    } else {
+        INPUT_TARJETA_NUMERO.setCustomValidity("");
+        INPUT_TARJETA_NUMERO.reportValidity();
+        let nros = Array.from(nroTarjetaValue).map(Number);
+        let sumaDeNros = nros.slice(0, -1).reduce((acc, num) => acc + num, 0);
+        const ultimoNro = nros[nros.length - 1];
+        if ((sumaDeNros % 2 === 0 && ultimoNro % 2 !== 0) || (sumaDeNros % 2 !== 0 && ultimoNro % 2 === 0)) {
             verify_tarjeta = true;
-        }else{
-            return ultimoNro % 2 !== 0;
-            console.log("La suma es par, el último dígito debe ser impar")
-            verify_tarjeta = true;
+            console.log("Número de tarjeta válido");
+        } else {
+            INPUT_TARJETA_NUMERO.setCustomValidity("Número de tarjeta inválido según la validación");
+            INPUT_TARJETA_NUMERO.reportValidity();
+            verify_tarjeta = false;
         }
-}
+    }
 }
 
 function validarNroCvv(){
-let cvvValue = INPUT_TARJETA_CVV.value
-if(!REGEX_CVV.test(cvvValue)){
-    INPUT_TARJETA_CVV.setCustomValidity("CODIGO DE AUTENTICIDAD INCORRECTO");
-    INPUT_TARJETA_CVV.reportValidity();
-    verify_tarjeta = false;
-}else if(cvvValue === "000"){
-    INPUT_TARJETA_CVV.setCustomValidity("CODIGO DE AUTENTICIDAD INCORRECTO, NO PUEDE CONTENER 000");
-    INPUT_TARJETA_CVV.reportValidity();
-    verify_tarjeta = false;
-}else{
-    INPUT_TARJETA_CVV.setCustomValidity("");
-    INPUT_TARJETA_CVV.reportValidity();
-    console.log("CVV CORRECTO")
-    verify_tarjeta = true;
-}
+    let cvvValue = INPUT_TARJETA_CVV.value;
+    if (!REGEX_CVV.test(cvvValue) || cvvValue === "000") {
+        INPUT_TARJETA_CVV.setCustomValidity("Código de seguridad incorrecto");
+        INPUT_TARJETA_CVV.reportValidity();
+        verify_tarjeta = false;
+    } else {
+        INPUT_TARJETA_CVV.setCustomValidity("");
+        console.log("CVV correcto");
+        verify_tarjeta = true;
+    }
 }
 
-function SetMetodoDePago() { 
-    if(verify_tarjeta === true){
-        this.metododepago = "tarjeta"
-    }else if(verify_pagofacil === true){
-        this.metododepago = "pago facil"
-    }else if(verify_rapipago === true){
-        this.metododepago = "rapipago"
-    }else if (verify_cbu === true){
-        this.metododepago = "cbu"
+function SetMetodoDePago() {
+    if (verify_tarjeta) {
+        this.metododepago = "tarjeta";
+    } else if (verify_pagofacil) {
+        this.metododepago = "pago facil";
+    } else if (verify_rapipago) {
+        this.metododepago = "rapipago";
+    } else if (verify_cbu) {
+        this.metododepago = "cbu";
     }
 }

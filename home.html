@@ -10,119 +10,54 @@
 </head>
 
 <body style="color: white;">
+
+    <nav class="navbar">
+        <a href="./home.html" class="nav_icon"><img src="./img/icon.png" alt=""></a>
+        <a href="./home.html" class="nav_logo"><img src="./img/logo.png" alt=""></a>
+    <ul class="nav_menu">
+        <li class="nav_item"><a class="nav_link" href="./home.html">HOME</a></li>
+        <li class="nav_item"><a class="nav_link" href="./vista-serie.html">SERIES</a></li>
+        <li class="nav_item"><a class="nav_link" href="./vista-pelicula.html">PELÍCULAS</a></li>
+        <li class="nav_item"><a class="nav_link" href="./vista-perfil.html">PERFIL</a></li>
+    </ul>
+    <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    </nav>
+
     <header class="home_header">
-        <nav class="navbar">
-            <ul class="menu">
-                <li class="menu_item"><a href="./home.html"><img src="./img/logo.png" alt=""></a></li>
-                <li class="menu_item"><a class="menu_link" href="./home.html">HOME</a></li>
-                <li class="menu_item"><a class="menu_link" href="./vista-serie.html">SERIES</a></li>
-                <li class="menu_item"><a class="menu_link" href="./vista-pelicula.html">PELÍCULAS</a></li>
-                <li class="menu_item"><a class="menu_link" href="./vista-perfil.html">PERFIL</a></li>
-            </ul>
-        </nav>
+     
         <form action="" class="search_form">
             <div class="select_container_home">
                 <label for="select_category_home">Categorías</label>
                 <select name="select_category_home" id="select_category_home">
-                    <option value=“comedy”>Comedia</option>
+                    <option value="">Seleccionar</option>
+                    <option value="suspenso">Suspenso</option>
+                    <option value="drama">Drama</option>
+                    <option value="ciencia ficcion">Ciencia ficcion</option>
+                    <option value="comedia">Comedia</option>
                     <option value="romance">Romance</option>
-                    <option value="horror">Terror</option>
-                    <option value="action">Acción</option>
-                    <option value="fantasy">Fantasía</option>
+                    <option value="terror">Terror</option>
+                    <option value="acción">Acción</option>
                 </select>
             </div>
             <div class="search_container">
-                <input type="search" value="Buscar por nombre">
+                <input type="text" placeholder="Buscar por nombre" id="search-input">
             </div>
         </form>
     </header>
     <main>
         <section>
-            <div class="img_container">
-                <div class="img_item">
-                    <a href="./series/theboys.html">
-                        <img src="./img/seriecomedia1.jpg" alt="TheBoys">
-                    </a>           
-                </div>
-                <div class="img_item">
-                    <a href="./pelis/Unaesposadementira.html">
-                        <img src="./img/peliculacomedia1.jpg" alt="Una esposa de mentira">
-                    </a>
-                </div>
-                <div class="img_item">
-                    <a href="./pelis/ted.html">
-                        <img src="./img/peliculacomedia2.jpg" alt="Ted">
-                    </a>
-                </div>
-                <div class="img_item">
-                    <a href="./pelis/oneday.html">
-                        <img src="./img/pelicularomance1.jpg" alt="One Day">
-                    </a>
-                </div>
-                <div class="img_item">
-                    <a href="./series/elveranoquemeenamore.html">
-                        <img src="./img/serieromance1.jpg" alt="El Verano que me Enamore">
-                    </a>
-                </div>
-                <div class="img_item">
-                    <a href="./series/onetreehill.html">
-                        <img src="./img/serieromance2.jpg" alt="One Tree Hill">
-                    </a>
-                </div>
-                <div class="img_item">
-                    <a href="./pelis/sick.html">
-                        <img src="./img/peliculaterror1.jpg" alt="Sick">
-                    </a>
-                </div>
-                <div class="img_item">
-                    <a href="./pelis/hablame.html">
-                        <img src="./img/peliculaterror2.jpg" alt="Hablame">
-                    </a>
-                </div>
-                <div class="img_item">
-                    <a href="./series/wd-theonewholives.html">
-                        <img src="./img/serieterror1.jpg" alt="WD - The one who lives">
-                    </a>
-                </div>
-                <div class="img_item">
-                    <a href="./series/fallout.html">
-                        <img src="./img/serieaccion1.jpg" alt="Fallout">
-                    </a>
-                </div>
-                <div class="img_item">
-                    <a href="./series/swat.html">
-                        <img src="./img/serieaccion2.jpg" alt="S.W.A.T">
-                    </a>
-                </div>
-                <div class="img_item">
-                    <a href="./pelis/agentex.html">
-                        <img src="./img/peliculaaccion1.jpg" alt="Agente X">
-                    </a>
-                </div>
-                <div class="img_item">
-                    <a href="./pelis/jurassicworld.html">
-                        <img src="./img/peliculafantasia1.jpg" alt="Jurassic World">
-                    </a>
-                </div>
-                <div class="img_item">
-                    <a href="./pelis/venom.html">
-                        <img src="./img/peliculafantasia2.jpg" alt="Venom Carnage liberado">
-                    </a>
-                </div>
-                <div class="img_item">
-                    <a href="./series/worldbeyond.html">
-                        <img src="./img/seriefantasia1.jpg" alt="Walking Dead - World Beyond">
-                    </a>
-                </div>
-                <div class="img_item">
-                    <a href="./series/shameless.html">
-                        <img src="./img/seriecomedia2.jpg" alt="Shameless">
-                    </a>
-                </div>
+            <div id="dinamico"  class="img_container">
+
             </div>
         </section>
     </main>
-
+<script src="./scripts/data.js"></script>
+<script src="./scripts/home_dinamico.js"></script>
+<script src="./scripts/menu.js"></script>
 </body>
 
 </html>

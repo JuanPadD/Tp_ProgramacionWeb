@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css//flickity.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title></title>
+</head>
+
+<body style="color: white;">
+    <nav class="navbar">
+        <a href="./home.html" class="nav_icon"><img src="./img/icon.png" alt=""></a>
+        <a href="./home.html" class="nav_logo"><img src="./img/logo.png" alt=""></a>
+    <ul class="nav_menu">
+        <li class="nav_item"><a class="nav_link" href="./home.html">HOME</a></li>
+        <li class="nav_item"><a class="nav_link" href="./vista-serie.html">SERIES</a></li>
+        <li class="nav_item"><a class="nav_link" href="./vista-pelicula.html">PELÍCULAS</a></li>
+        <li class="nav_item"><a class="nav_link" href="./vista-perfil.html">PERFIL</a></li>
+    </ul>
+    <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    </nav>
+    <main>
+        <section class="movie_view">
+            <article>
+                <div class="movie_container" >
+                    <video controls autoplay id="video-pelicula">
+                    
+                    </video>
+                </div>
+                <div class="form_button">
+                    <button class="buttoncomenzar" type="submit" onclick="visitPage()">Comenzar</button>
+                </div>
+            </article>
+
+            <article class="description">
+                <div>
+                    <div class="detail_movie">
+                        <h3>Título:</h3>
+                            <p id="titulo-pelicula"> </p>
+                    </div>
+                    <div class="detail_movie">
+                        <h3>Género:</h3>
+                            <p id="generos-pelicula"></p>
+                    </div>
+                    <div class="detail_movie">
+                        <h3>Actores:</h3>
+                            <p id="actores-pelicula"> </p>
+                    </div>
+                </div>
+
+                <div class="resume">
+                    <p id="sinopsis-pelicula"></p>
+                </div>
+
+            </article>
+
+        </section>
+        <section class="recommendations ">
+            <h2>Similares</h2>
+            <div id="carousel-pelicula" class="main-carousel">
+                
+            </div>
+        </section>
+    </main>
+    <script src="./scripts/flickity.pkgd.min.js"></script>
+    <script src="./scripts/data.js"></script>
+    <script src="./scripts/clase_pelicula.js"></script>
+    <script src="./scripts/pelicula.js"></script>
+    <script src="./scripts/menu.js"></script>
+</body>
+
+</html>

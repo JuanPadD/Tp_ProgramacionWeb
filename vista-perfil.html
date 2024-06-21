@@ -11,53 +11,67 @@
 
 <body class="profile">
     <nav class="navbar">
-        <ul class="menu">
-            <li class="menu_item"><a href="./home.html"><img src="./img/logo.png" alt=""></a></li>
-            <li class="menu_item"><a class="menu_link" href="./home.html">HOME</a></li>
-            <li class="menu_item"><a class="menu_link" href="./vista-serie.html">SERIES</a></li>
-            <li class="menu_item"><a class="menu_link" href="./vista-pelicula.html">PELÍCULAS</a></li>
-            <li class="menu_item"><a class="menu_link" href="./vista-perfil.html">PERFIL</a></li>
-        </ul>
+        <a href="./home.html" class="nav_icon"><img src="./img/icon.png" alt=""></a>
+        <a href="./home.html" class="nav_logo"><img src="./img/logo.png" alt=""></a>
+    <ul class="nav_menu">
+        <li class="nav_item"><a class="nav_link" href="./home.html">HOME</a></li>
+        <li class="nav_item"><a class="nav_link" href="./vista-serie.html">SERIES</a></li>
+        <li class="nav_item"><a class="nav_link" href="./vista-pelicula.html">PELÍCULAS</a></li>
+        <li class="nav_item"><a class="nav_link" href="./vista-perfil.html">PERFIL</a></li>
+    </ul>
+    <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
     </nav>
 
     <section class="profile_container">
 
         <div class="user_pic">
             <img class="profile_pic" src="./img/perfilimage.png" alt="">
-            <h3>Nombre de usuario</h3>
+            <h3 id="nombre_usuario"></h3>
         </div>
 
-        <form class="profile_info"action="">
+        <form class="profile_info" action="./home.html" method="get" id="formularioRegistro">
 
             <div class="user_info">
                 <p class="info_text">Email</p>
-                <p>Ejemploemail@email.com</p>
-                <label class="info_text" for="">Nueva contraseña
-                    <input type="password" placeholder="Ingrese nueva contraseña" class="changepass" required>
+                <p id="email_usuario"></p>
+                <label class="info_text" for="pass">Nueva contraseña
+                    <input type="password" class="input" name="password" id="pass" placeholder="Ingrese nueva contraseña" required>
                 </label>
-                <label class="info_text" for="">Repetir contraseña
-                    <input type="password" placeholder="Ingrese nueva contraseña" class="changepass" required>
+                <label class="info_text" for="repass">Repetir contraseña
+                    <input type="password" class="input" name="repass" id="repass" placeholder="Repetir contraseña" required>
                 </label>
             </div>
 
             <div class="payment_info">
                     <p class="info_text">Método de pago</p>
 
-                    <label class="input" for="">Tarjeta de crédito<input type="radio" name="paymethod"></label>
-                    <input type="number" placeholder="xxxxxxxxx">
-                    <input type="number" placeholder="xxxxxxx">
-                    <label for="">Cupón de pago<input type="radio" name="paymethod"></label>
-                    <label for="">Pago fácil<input type="radio" name="paymethod" id=""></label>                
-                    <label for="">RapiPago<input type="radio" name="paymethod" id=""></label>   
-                    <label for="">Transferencia bancaria<input type="radio" name="paymethod"></label>
-                    <p>CBU : 0000000000000000</p>
+                    <label for="creddit_card" class="pagos" id="tarjetadecredito">
+                        <input type="radio" id="cbox1" name="mediodepago" value="1"> <p>Tarjeta de Crédito</p> 
+                       <input type="number" id="card_number" class="no-spin-buttons" name="card_number" placeholder="Número de tarjeta">
+                      <input type="number" id="sec_code" class="no-spin-buttons" name="sec_code" placeholder="CVV">
+                    </label>
+
+
+                    <label class="pagos">
+                        <input type="radio" id="cbox2" name="mediodepago" value="2">Pago Facil
+                        <input type="radio" id="cbox3" name="mediodepago" value="3">RapiPago
+                    </label>
+                    <label class="pagos">
+                        <input type="radio" id="cbox4"name="mediodepago" value="4">Transferencia bancaria
+                        <p>CBU: 0101010101010101</p>
+                    </label>
             </div>
             <div class="savechanges_buttons_container">
-                <button type="submit" class="savechanges">Guardar cambios</button>
-                <button type="submit" class="cancelsuscription"><a href="./index.html">Cancelar suscripción</a></button>
+                <button type="submit" class="savechanges" id="guardarbutton">Guardar cambios</button>
+                <button type="submit" class="cancelsuscription" id="cancelarbutton"><a href="./index.html">Cancelar suscripción</a></button>
             </div>
         </form>
     </section>
 </body>
-
+<script src="./scripts/registro.js"></script>
+<script src="./scripts/menu.js"></script>
 </html>
