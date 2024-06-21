@@ -1,5 +1,3 @@
-console.log('Script cargado correctamente');
-
 const USUARIOS = [];
 const FORMULARIO = document.getElementById('formularioRegistro');
 const CAMPO_NOMBRE = document.getElementById('name');
@@ -17,7 +15,6 @@ const INPUT_PAGOFACIL = document.getElementById('cbox2');
 const INPUT_RAPIPAGO = document.getElementById('cbox3');
 const INPUT_CBU = document.getElementById('cbox4');
 const BOTON_REGISTRAR = document.getElementById('registrarbutton');
-const BOTON_GUARDAR = document.getElementById('guardarbutton');
 const RADIOBUTTON_TARJETA = document.getElementById('cbox1');
 const RADIOBUTTON_PAGOFACIL = document.getElementById('cbox2');
 const RADIOBUTTON_RAPIPAGO = document.getElementById('cbox3');
@@ -77,115 +74,9 @@ BOTON_REGISTRAR.addEventListener('click', function(event) {
         console.log("Usuario registrado correctamente");
         FORMULARIO.submit();
     } else {
-        console.log("Error en el registro. Por favor, verificar los campos.");
+        console.log("Error en el registro. Por favor, verifica los campos.");
     }
-
-document.addEventListener('DOMContentLoaded', () => {
-    let usuariosGuardados = JSON.parse(localStorage.getItem('USUARIOS')) || [];
-
-    if (usuariosGuardados.length > 0) {
-        let primerUsuario = usuariosGuardados[0];
-        const nombreUsuarioElemento = document.getElementById('nombre_usuario');
-        const emailUsuarioElemento = document.getElementById('email_usuario');
-
-        if (nombreUsuarioElemento) {
-            nombreUsuarioElemento.textContent = primerUsuario.nombre;
-        } else {
-            console.error('Elemento con id "nombre_usuario" no encontrado.');
-        }
-
-        if (emailUsuarioElemento) {
-            emailUsuarioElemento.textContent = primerUsuario.email;
-        } else {
-            console.error('Elemento con id "email_usuario" no encontrado.');
-        }
-    } else {
-        console.error('No hay usuarios guardados en localStorage.');
-    }
-
-document.addEventListener('DOMContentLoaded', () => {
-    let usuariosGuardados = JSON.parse(localStorage.getItem('USUARIOS')) || [];
-
-    if (usuariosGuardados.length > 0) {
-        let primerUsuario = usuariosGuardados[0];
-        const nombreUsuarioElemento = document.getElementById('nombre_usuario');
-        const emailUsuarioElemento = document.getElementById('email_usuario');
-
-        if (nombreUsuarioElemento) {
-            nombreUsuarioElemento.textContent = primerUsuario.nombre;
-        } else {
-            console.error('Elemento con id "nombre_usuario" no encontrado.');
-        }
-
-        if (emailUsuarioElemento) {
-            emailUsuarioElemento.textContent = primerUsuario.email;
-        } else {
-            console.error('Elemento con id "email_usuario" no encontrado.');
-        }
-    } else {
-        console.error('No hay usuarios guardados en localStorage.');
-    }
-
 });
-
-
-
-if(BOTON_REGISTRAR){
-    BOTON_REGISTRAR.addEventListener('click', function(event) {
-        let usuariosGuardados = JSON.parse(localStorage.getItem('USUARIOS')) || [];
-        verificarCondicionesNombre()
-        verificarCondicionesApellido()
-        verificarDisponibilidadDeNombreDeUsuario()
-        verificarCondicionesPassword()
-        verificarCondicionesPassword()
-        verificarIgualdadEnClaves()
-        validarMail();
-    
-        if (verify_tarjeta === true){
-            validarNroDeTarjeta()
-            validarNroCvv()
-        }
-    
-        if(verify){
-            SetMetodoDePago();
-            let nuevoUsuario = new Usuario(nuevo_nombre_usuario, nuevo_apellido_usuario, nuevo_username_usuario, nuevo_password_usuario, nuevo_email_usuario);
-            USUARIOS.push(nuevoUsuario);
-            localStorage.setItem('USUARIOS', JSON.stringify(USUARIOS));
-            console.log("Usuario registrado correctamente");
-            event.submit;
-        }
-    
-        USUARIOS.push(this);
-        localStorage.setItem(this.username, JSON.stringify(USUARIOS));
-    });
-}
-
-if(BOTON_GUARDAR){
-    BOTON_GUARDAR.addEventListener('click', function(event) {
-        let usuariosGuardados = JSON.parse(localStorage.getItem('USUARIOS')) || [];
-        verificarCondicionesPassword()
-        verificarCondicionesPassword()
-        verificarIgualdadEnClaves()
-        validarMail();
-    
-        if (verify_tarjeta === true){
-            validarNroDeTarjeta()
-            validarNroCvv()
-        }
-    
-        if(verify){
-            SetMetodoDePago();
-            let nuevoUsuario = new Usuario(nuevo_nombre_usuario, nuevo_apellido_usuario, nuevo_username_usuario, nuevo_password_usuario, nuevo_email_usuario);
-            USUARIOS.push(nuevoUsuario);
-            localStorage.setItem('USUARIOS', JSON.stringify(USUARIOS));
-            console.log("Usuario registrado correctamente");
-            event.submit;
-        }
-    
-        USUARIOS.push(this);
-        localStorage.setItem(this.username, JSON.stringify(USUARIOS));
-    });
-}
 
 RADIOBUTTON_TARJETA.addEventListener('click', function(event){
     INPUT_TARJETA_NUMERO.classList.remove("ocultar");
