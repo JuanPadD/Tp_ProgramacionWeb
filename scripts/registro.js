@@ -53,7 +53,6 @@ class Usuario {
     }
 }
 
-<<<<<<< HEAD
 BOTON_REGISTRAR.addEventListener('click', function(event) {
     event.preventDefault();
     verify = true;
@@ -80,7 +79,7 @@ BOTON_REGISTRAR.addEventListener('click', function(event) {
     } else {
         console.log("Error en el registro. Por favor, verificar los campos.");
     }
-=======
+
 document.addEventListener('DOMContentLoaded', () => {
     let usuariosGuardados = JSON.parse(localStorage.getItem('USUARIOS')) || [];
 
@@ -103,7 +102,30 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         console.error('No hay usuarios guardados en localStorage.');
     }
->>>>>>> 2b5e162682d83e9543721c953ece1ae03cfd00cb
+
+document.addEventListener('DOMContentLoaded', () => {
+    let usuariosGuardados = JSON.parse(localStorage.getItem('USUARIOS')) || [];
+
+    if (usuariosGuardados.length > 0) {
+        let primerUsuario = usuariosGuardados[0];
+        const nombreUsuarioElemento = document.getElementById('nombre_usuario');
+        const emailUsuarioElemento = document.getElementById('email_usuario');
+
+        if (nombreUsuarioElemento) {
+            nombreUsuarioElemento.textContent = primerUsuario.nombre;
+        } else {
+            console.error('Elemento con id "nombre_usuario" no encontrado.');
+        }
+
+        if (emailUsuarioElemento) {
+            emailUsuarioElemento.textContent = primerUsuario.email;
+        } else {
+            console.error('Elemento con id "email_usuario" no encontrado.');
+        }
+    } else {
+        console.error('No hay usuarios guardados en localStorage.');
+    }
+
 });
 
 
