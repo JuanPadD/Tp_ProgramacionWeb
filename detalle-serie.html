@@ -13,25 +13,24 @@
     <nav class="navbar">
         <a href="./home.html" class="nav_icon"><img src="./img/icon.png" alt=""></a>
         <a href="./home.html" class="nav_logo"><img src="./img/logo.png" alt=""></a>
-    <ul class="nav_menu">
-        <li class="nav_item"><a class="nav_link" href="./home.html">HOME</a></li>
-        <li class="nav_item"><a class="nav_link" href="./vista-serie.html">SERIES</a></li>
-        <li class="nav_item"><a class="nav_link" href="./vista-pelicula.html">PELÍCULAS</a></li>
-        <li class="nav_item"><a class="nav_link" href="./vista-perfil.html">PERFIL</a></li>
-        <button id="logoutButton" class="logout_btn">CERRAR SESIÓN</button>
-    </ul>
-    <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </div>
+        <ul class="nav_menu">
+            <li class="nav_item"><a class="nav_link" href="./home.html">HOME</a></li>
+            <li class="nav_item"><a class="nav_link" href="./vista-serie.html">SERIES</a></li>
+            <li class="nav_item"><a class="nav_link" href="./vista-pelicula.html">PELÍCULAS</a></li>
+            <li class="nav_item"><a class="nav_link" href="./vista-perfil.html">PERFIL</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </nav>
     <main>
         <section class="movie_view">
             <article>
                 <div class="movie_container">
                     <video controls autoplay id="video-serie">
-                        
+
                     </video>
                 </div>
                 <div class="form_button">
@@ -43,7 +42,7 @@
                 <div>
                     <div class="detail_movie">
                         <h3>Título:</h3>
-                            <p id="titulo-serie"></p>
+                        <p id="titulo-serie"></p>
                     </div>
                     <div class="temp_cap_selector">
                         <div class="select_container">
@@ -53,22 +52,22 @@
 
                             </select>
                         </div>
-    
+
                         <div class="select_container">
                             <label for="select-capitulo-serie">Capítulo</label>
-                            <select name="select-capitulo-serie" class="select_category">
+                            <select name="select-capitulo-serie" id="select-capitulo-serie" class="select_category">
                                 <option value=“0”>Capítulo</option>
-                                
+
                             </select>
                         </div>
                     </div>
                     <div class="detail_movie">
                         <h3>Género:</h3>
-                            <p id="generos-serie"></p>
+                        <p id="generos-serie"></p>
                     </div>
                     <div class="detail_movie">
                         <h3>Actores:</h3>
-                            <p id="actores-serie"></p>
+                        <p id="actores-serie"></p>
                     </div>
                 </div>
 
@@ -82,7 +81,7 @@
         <section class="recommendations ">
             <h2>Similares</h2>
             <div id="carousel-serie" class="main-carousel">
-                
+
             </div>
         </section>
     </main>
@@ -91,7 +90,6 @@
     <script src="./scripts/clase_serie.js"></script>
     <script src="./scripts/serie.js"></script>
     <script src="./scripts/menu.js"></script>
-    <script src="./scripts/logout.js"></script>
 </body>
 
 </html>
