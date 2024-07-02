@@ -31,7 +31,10 @@ function validarMail(campo){
             console.log("Usuario encontrado:", usuarioEncontrado);
             verify = true;
         } else {
+            CAMPO_MAIL.setCustomValidity("El correo no esta registrado.");
+            CAMPO_MAIL.reportValidity();
             console.log("Correo no registrado");
+            verify = false;
         }
     }
 }
