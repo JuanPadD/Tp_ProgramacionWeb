@@ -60,6 +60,7 @@ BOTON_REGISTRAR.addEventListener('click', function(event) {
     verificarCondicionesPassword();
     verificarIgualdadEnClaves();
     validarMail();
+    validarUsuarioExistente();
 
     if (verify_tarjeta) {
         validarNroDeTarjeta();
@@ -236,4 +237,15 @@ function SetMetodoDePago() {
     } else if (verify_cbu) {
         this.metododepago = "cbu";
     }
+}
+
+function validarUsuarioExistente(){
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+    let userExistente = users.some(user => user.email === email || user.username === username);
+
+    if (userExistente) {
+        console.log("El usuario con ese correo electrónico o nombre de usuario ya existe.")
+    }
+
+
 }
