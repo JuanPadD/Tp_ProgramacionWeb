@@ -26,7 +26,7 @@ let verify_rapipago = false;
 let verify_cbu = false;
 const REGEX_SOLO_LETRAS = /^[A-Za-z]+$/;
 const REGEX_ALFANUMERICO = /^[A-Za-z0-9]+$/;
-const REGEX_CLAVE = /^(?=(.*[A-Za-z]){2})(?=(.*[0-9]){2})(?=(.*[!@#$%^&*(),.?":{}|<>]){2}).{8}$/
+const REGEX_CLAVE = /^(?=(?:[^A-Za-z]*[A-Za-z]){2})(?=(?:[^0-9]*[0-9]){2})(?=(?:[^!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]){2}).{8,}$/
 const REGEX_MAIL = /^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/;
 const REGEX_TARJETA = /^[0-9]{16,19}$/;
 const REGEX_CVV = /^[0-9]{3}$/;;
