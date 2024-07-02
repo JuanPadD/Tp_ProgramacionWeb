@@ -1,4 +1,4 @@
-const USUARIOS = [];
+const USUARIOS = JSON.parse(localStorage.getItem('USUARIOS')) || [];
 const FORMULARIO = document.getElementById('formularioRegistro');
 const CAMPO_NOMBRE = document.getElementById('name');
 const CAMPO_APELLIDO = document.getElementById('lastname');
@@ -29,13 +29,12 @@ const REGEX_ALFANUMERICO = /^[A-Za-z0-9]+$/;
 const REGEX_CLAVE = /^(?=(?:[^A-Za-z]*[A-Za-z]){2})(?=(?:[^0-9]*[0-9]){2})(?=(?:[^!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]){2}).{8,}$/
 const REGEX_MAIL = /^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/;
 const REGEX_TARJETA = /^[0-9]{16,19}$/;
-const REGEX_CVV = /^[0-9]{3}$/;;
+const REGEX_CVV = /^[0-9]{3}$/;
 let nuevo_nombre_usuario; // VARIABLE PARA GENERAR EL NUEVO USUARIO Y PASARLA POR PARAMETRO AL CONSTRUCTOR
 let nuevo_apellido_usuario; // VARIABLE PARA GENERAR EL NUEVO USUARIO Y PASARLA POR PARAMETRO AL CONSTRUCTOR
 let nuevo_username_usuario; // VARIABLE PARA GENERAR EL NUEVO USUARIO Y PASARLA POR PARAMETRO AL CONSTRUCTOR
 let nuevo_password_usuario; // VARIABLE PARA GENERAR EL NUEVO USUARIO Y PASARLA POR PARAMETRO AL CONSTRUCTOR
 let nuevo_email_usuario; // VARIABLE PARA GENERAR EL NUEVO USUARIO Y PASARLA POR PARAMETRO AL CONSTRUCTOR
-
 
 //*********************************************METODOS**************************************************************** 
 
@@ -246,6 +245,4 @@ function validarUsuarioExistente(){
     if (userExistente) {
         console.log("El usuario con ese correo electrónico o nombre de usuario ya existe.")
     }
-
-
 }
