@@ -90,6 +90,7 @@ function validarClave(campo){
     
         if(usuarioEncontrado){
             console.log("Usuario encontrado:", usuarioEncontrado);
+            localStorage.setItem('usuarioActual', JSON.stringify(usuarioEncontrado));
             verify = true;
         } else {
             console.log("Correo o clave no registrados");
